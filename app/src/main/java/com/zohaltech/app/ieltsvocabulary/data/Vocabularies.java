@@ -11,13 +11,13 @@ import com.zohaltech.app.ieltsvocabulary.entities.Vocabulary;
 import java.util.ArrayList;
 
 public class Vocabularies {
-    static final String TableName  = "Vocabularies";
-    static final String Id         = "Id";
-    static final String ThemeId    = "ThemeId";
-    static final String Vocabulary = "Vocabulary";
-    static final String EnglishDef = "EnglishDef";
-    static final String Learned    = "Learned";
-    static final String Bookmarked = "Bookmarked";
+ public static final String TableName  = "Vocabularies";
+ public static final String Id         = "Id";
+ public static final String ThemeId    = "ThemeId";
+ public static final String Vocabulary = "Vocabulary";
+ public static final String EnglishDef = "EnglishDef";
+ public static final String Learned    = "Learned";
+ public static final String Bookmarked = "Bookmarked";
 
     static final String CreateTable = "CREATE TABLE " + TableName + " ( " +
                                       Id + " INTEGER PRIMARY KEY NOT NULL, " +

@@ -78,12 +78,41 @@
                         <widgets.LatinTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Start theme: "
+                            android:text="Start lesson: "
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             tools:ignore="HardcodedText"/>
 
                         <android.support.v7.widget.AppCompatSpinner
-                            android:id="@+id/spinnerStartTheme"
+                            android:id="@+id/spinnerStartLesson"
+                            style="@style/FormButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@drawable/item_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:drawable/divider_horizontal_bright"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:orientation="horizontal">
+
+                        <widgets.LatinTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Words Per Day: "
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            tools:ignore="HardcodedText"/>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinnerWordsPerDay"
                             style="@style/FormButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -364,7 +393,7 @@
                     android:padding="10dp"
                     android:text="STATUS : RUNNING"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/green"/>
+                    android:textColor="@color/primary"/>
 
             </LinearLayout>
 

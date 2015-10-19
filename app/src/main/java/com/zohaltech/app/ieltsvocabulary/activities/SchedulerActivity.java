@@ -39,7 +39,8 @@ import java.util.Locale;
 
 import widgets.MyToast;
 
-public class SchedulerActivity extends PaymentActivity {
+public class SchedulerActivity extends EnhancedActivity
+{
     CheckBox chkSa;
     CheckBox chkSu;
     CheckBox chkMo;
@@ -49,30 +50,33 @@ public class SchedulerActivity extends PaymentActivity {
     CheckBox chkFr;
 
     AppCompatSpinner spinnerIntervals;
-    AppCompatSpinner spinnerStartTheme;
+    AppCompatSpinner spinnerWordsPerDay;
+    AppCompatSpinner spinnerStartLesson;
 
-    Button       btnStart;
-    Button       btnStop;
-    Button       btnPause;
-    Button       btnRestart;
-    Button       btnStartTime;
+    Button btnStart;
+    Button btnStop;
+    Button btnPause;
+    Button btnRestart;
+    Button btnStartTime;
     LinearLayout layoutRingtone;
-    Button       btnSelectTone;
+    Button btnSelectTone;
 
     TextView txtStatus;
 
     @Override
-    protected void onCreated() {
-        super.onCreated();
+    protected void onCreated()
+    {
         setContentView(R.layout.activity_scheduler);
         initialise();
     }
 
-    private void initialise() {
+    private void initialise()
+    {
         //edtStartVocabularyNo = (EditText) findViewById(R.id.edtStartVocabularyNo);
         //edtAlarmIntervals = (EditText) findViewById(R.id.edtAlarmIntervals);
         spinnerIntervals = (AppCompatSpinner) findViewById(R.id.spinnerIntervals);
-        spinnerStartTheme = (AppCompatSpinner) findViewById(R.id.spinnerStartTheme);
+        spinnerWordsPerDay = (AppCompatSpinner) findViewById(R.id.spinnerWordsPerDay);
+        spinnerStartLesson = (AppCompatSpinner) findViewById(R.id.spinnerStartLesson);
         btnStartTime = (Button) findViewById(R.id.btnStartTime);
 
         chkSa = (CheckBox) findViewById(R.id.chkSa);
@@ -91,7 +95,8 @@ public class SchedulerActivity extends PaymentActivity {
         btnSelectTone = (Button) findViewById(R.id.btnSelectTone);
         txtStatus = (TextView) findViewById(R.id.txtStatus);
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB)
+        {
             layoutRingtone.setVisibility(View.GONE);
         }
 
@@ -164,86 +169,67 @@ public class SchedulerActivity extends PaymentActivity {
             }
         });
 
-        //Button btnGetLastStatus = (Button) findViewById(R.id.btnGetStatus);
-        //btnGetLastStatus.setOnClickListener(new View.OnClickListener()
-        //{
-        //    @Override
-        //    public void onClick(View v)
-        //    {
-        //        ReminderSettings settings = ReminderManager.getReminderSettings();
-        //        String status = settings.getStatus().toString();
-        //        if (settings.getReminder() != null)
-        //        {
-        //            Date time = settings.getReminder().getTime();
-        //            String remindTime = (time == null ? "Not Set" : time.toString());
-        //            Toast.makeText(SchedulerActivity.this, "Status:" + status + "\n Alarm Time: " + remindTime, Toast.LENGTH_LONG).show();
-        //        }
-        //        else
-        //        {
-        //            Toast.makeText(SchedulerActivity.this, "Status:" + status + "\n No Reminder", Toast.LENGTH_LONG).show();
-        //        }
-        //    }
-        //});
-
         setViewsStatus();
     }
 
-    private void start() {
-        if (SystemSettings.getCurrentSettings().isPremium()) {
-            ReminderSettings settings = ReminderManager.getReminderSettings();
+    private void start()
+    {
+        ReminderSettings settings = ReminderManager.getReminderSettings();
 
-            boolean paused = settings.getStatus() == ReminderSettings.Status.PAUSE;
+        boolean paused = settings.getStatus() == ReminderSettings.Status.PAUSE;
 
-            boolean[] days = {
-                    chkSu.isChecked(),
-                    chkMo.isChecked(),
-                    chkTu.isChecked(),
-                    chkWe.isChecked(),
-                    chkTh.isChecked(),
-                    chkFr.isChecked(),
-                    chkSa.isChecked()};
+        boolean[] days = {
+                chkSu.isChecked(),
+                chkMo.isChecked(),
+                chkTu.isChecked(),
+                chkWe.isChecked(),
+                chkTh.isChecked(),
+                chkFr.isChecked(),
+                chkSa.isChecked()};
 
-            int selectedThemeId = spinnerStartTheme.getSelectedItemPosition() + 1;
-            int startVocabId = Vocabularies.selectByTheme(selectedThemeId).get(0).getId();
+        int selectedLesson = spinnerStartLesson.getSelectedItemPosition() + 1;
+        int startVocabId = Vocabularies.selectByTheme(selectedLesson).get(0).getId();
 
-            Date reminderTime = Calendar.getInstance().getTime();
-            Reminder garbage = settings.getReminder();
-            if (garbage != null) {
-                if (garbage.getTime() != null) {
-                    reminderTime = garbage.getTime();
-                }
-
-                startVocabId = garbage.getVocabularyId();
-            }
-            Vocabulary vocabulary = Vocabularies.select(startVocabId);
-            if (vocabulary == null) {
-                return;
+        Date reminderTime = Calendar.getInstance().getTime();
+        Reminder garbage = settings.getReminder();
+        if (garbage != null)
+        {
+            if (garbage.getTime() != null)
+            {
+                reminderTime = garbage.getTime();
             }
 
-
-            settings.setReminder(new Reminder(vocabulary.getId(), reminderTime, vocabulary.getVocabulary(), vocabulary.getVocabEnglishDef(), true));
-            settings.setStartTime(btnStartTime.getText().toString());
-            //settings.setIntervals(Integer.parseInt(edtAlarmIntervals.getText().toString()));
-            //  settings.setIntervals();
-            settings.setIntervals((Integer) spinnerIntervals.getSelectedItem());
-            settings.setWeekdays(days);
-            settings.setStatus(ReminderSettings.Status.RUNNING);
-            ReminderManager.setReminderSettings(settings);
-
-            ReminderManager.start(paused);
-
-            bind();
-
-            settings = ReminderManager.getReminderSettings();
-            Date time = settings.getReminder().getTime();
-            SimpleDateFormat sdf = new SimpleDateFormat("EEEE HH:mm", Locale.getDefault());
-            MyToast.show("First vocabulary will be notified on " + sdf.format(time), Toast.LENGTH_LONG);
-        } else {
-            showPaymentDialog();
+            startVocabId = garbage.getVocabularyId();
         }
+        Vocabulary vocabulary = Vocabularies.select(startVocabId);
+        if (vocabulary == null)
+        {
+            return;
+        }
+
+
+        settings.setReminder(new Reminder(vocabulary.getId(), reminderTime, vocabulary.getVocabulary(), vocabulary.getVocabEnglishDef(), true));
+        settings.setStartTime(btnStartTime.getText().toString());
+        //settings.setIntervals(Integer.parseInt(edtAlarmIntervals.getText().toString()));
+        //  settings.setIntervals();
+        settings.setIntervals((Integer) spinnerIntervals.getSelectedItem());
+        settings.setWordsPerDay((Integer) spinnerWordsPerDay.getSelectedItem());
+        settings.setWeekdays(days);
+        settings.setStatus(ReminderSettings.Status.RUNNING);
+        ReminderManager.applyReminderSettings(settings);
+
+        ReminderManager.start(paused);
+
+        bind();
+
+        settings = ReminderManager.getReminderSettings();
+        Date time = settings.getReminder().getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE HH:mm", Locale.getDefault());
+        MyToast.show("First vocabulary will be notified on " + sdf.format(time), Toast.LENGTH_LONG);
     }
 
-    private void bind() {
+    private void bind()
+    {
         ReminderSettings settings = ReminderManager.getReminderSettings();
 
         btnRestart.setVisibility(View.GONE);
@@ -251,15 +237,22 @@ public class SchedulerActivity extends PaymentActivity {
         btnPause.setVisibility(View.GONE);
         btnStart.setVisibility(View.GONE);
 
-        if (settings.getStatus() == ReminderSettings.Status.STOP) {
+        if (settings.getStatus() == ReminderSettings.Status.STOP)
+        {
             btnStart.setVisibility(View.VISIBLE);
-        } else if (settings.getStatus() == ReminderSettings.Status.RUNNING) {
+        }
+        else if (settings.getStatus() == ReminderSettings.Status.RUNNING)
+        {
             btnStop.setVisibility(View.VISIBLE);
             btnPause.setVisibility(View.VISIBLE);
-        } else if (settings.getStatus() == ReminderSettings.Status.PAUSE) {
+        }
+        else if (settings.getStatus() == ReminderSettings.Status.PAUSE)
+        {
             btnStop.setVisibility(View.VISIBLE);
             btnStart.setVisibility(View.VISIBLE);
-        } else if (settings.getStatus() == ReminderSettings.Status.FINISHED) {
+        }
+        else if (settings.getStatus() == ReminderSettings.Status.FINISHED)
+        {
             btnRestart.setVisibility(View.VISIBLE);
         }
 
@@ -267,6 +260,7 @@ public class SchedulerActivity extends PaymentActivity {
         //edtAlarmIntervals.setText(String.valueOf(settings.getIntervals()));
 
         ArrayList<Integer> intervals = new ArrayList<>();
+
         //intervals.add(1);
         intervals.add(15);
         intervals.add(30);
@@ -278,23 +272,45 @@ public class SchedulerActivity extends PaymentActivity {
         spinnerIntervals.setAdapter(intervalAdapter);
         spinnerIntervals.setSelection(intervalAdapter.getPosition(settings.getIntervals()));
 
-        ArrayList<String> themeNames = new ArrayList<>();
-        ArrayList<Theme> themes = Themes.select();
 
-        for (Theme theme : themes) {
-            themeNames.add(theme.getName());
+        ArrayList<Integer> wordsPerDay = new ArrayList<>();
+
+        wordsPerDay.add(1);
+        wordsPerDay.add(2);
+        wordsPerDay.add(3);
+        wordsPerDay.add(4);
+        wordsPerDay.add(5);
+        wordsPerDay.add(6);
+        wordsPerDay.add(7);
+        wordsPerDay.add(8);
+        wordsPerDay.add(9);
+        wordsPerDay.add(10);
+        wordsPerDay.add(11);
+        wordsPerDay.add(12);
+
+        ArrayAdapter<Integer> wordsPerDayAdapter = new ArrayAdapter<>(this, R.layout.spinner_current_item, wordsPerDay);
+        wordsPerDayAdapter.setDropDownViewResource(R.layout.spinner_item_center);
+        spinnerWordsPerDay.setAdapter(wordsPerDayAdapter);
+        spinnerWordsPerDay.setSelection(wordsPerDayAdapter.getPosition(settings.getWordsPerDay()));
+
+
+        ArrayList<String> lessons = new ArrayList<>();
+
+        for (int i = 0; i < 42; i++)
+        {
+            lessons.add("Lesson " + (i + 1));
         }
 
-        ArrayAdapter<String> themesAdapter = new ArrayAdapter<>(this, R.layout.spinner_current_item, themeNames);
-        themesAdapter.setDropDownViewResource(R.layout.spinner_item);
-        spinnerStartTheme.setAdapter(themesAdapter);
-        spinnerStartTheme.setSelection(0);
+        ArrayAdapter<String> lessonsAdapter = new ArrayAdapter<>(this, R.layout.spinner_current_item, lessons);
+        lessonsAdapter.setDropDownViewResource(R.layout.spinner_item);
+        spinnerStartLesson.setAdapter(lessonsAdapter);
+        spinnerStartLesson.setSelection(0);
 
-        if (settings.getReminder() != null) {
+        if (settings.getReminder() != null)
+        {
             Vocabulary vocabulary = Vocabularies.select(settings.getReminder().getVocabularyId());
             assert vocabulary != null;
-            spinnerStartTheme.setSelection(vocabulary.getThemeId() - 1);
-            //edtStartVocabularyNo.setText(String.valueOf(settings.getReminder().getVocabularyId()));
+            spinnerStartLesson.setSelection(vocabulary.getThemeId() - 1);
         }
         boolean[] days = settings.getWeekdays();
 
@@ -310,12 +326,15 @@ public class SchedulerActivity extends PaymentActivity {
         btnSelectTone.setText(setting.getAlarmRingingTone());
     }
 
-    private void setViewsStatus() {
-        switch (ReminderManager.getReminderSettings().getStatus()) {
+    private void setViewsStatus()
+    {
+        switch (ReminderManager.getReminderSettings().getStatus())
+        {
             case RUNNING:
-                spinnerStartTheme.setEnabled(false);
+                spinnerStartLesson.setEnabled(false);
                 btnStartTime.setEnabled(false);
                 spinnerIntervals.setEnabled(false);
+                spinnerWordsPerDay.setEnabled(false);
                 chkSu.setEnabled(false);
                 chkMo.setEnabled(false);
                 chkTu.setEnabled(false);
@@ -327,9 +346,10 @@ public class SchedulerActivity extends PaymentActivity {
                 txtStatus.setText("Status : Running");
                 break;
             case PAUSE:
-                spinnerStartTheme.setEnabled(false);
+                spinnerStartLesson.setEnabled(false);
                 btnStartTime.setEnabled(true);
                 spinnerIntervals.setEnabled(true);
+                spinnerWordsPerDay.setEnabled(true);
                 chkSu.setEnabled(true);
                 chkMo.setEnabled(true);
                 chkTu.setEnabled(true);
@@ -341,9 +361,10 @@ public class SchedulerActivity extends PaymentActivity {
                 txtStatus.setText("Status : Paused");
                 break;
             case STOP:
-                spinnerStartTheme.setEnabled(true);
+                spinnerStartLesson.setEnabled(true);
                 btnStartTime.setEnabled(true);
                 spinnerIntervals.setEnabled(true);
+                spinnerWordsPerDay.setEnabled(true);
                 chkSu.setEnabled(true);
                 chkMo.setEnabled(true);
                 chkTu.setEnabled(true);
@@ -355,9 +376,10 @@ public class SchedulerActivity extends PaymentActivity {
                 txtStatus.setText("Status : Stopped");
                 break;
             case FINISHED:
-                spinnerStartTheme.setEnabled(true);
+                spinnerStartLesson.setEnabled(true);
                 btnStartTime.setEnabled(true);
                 spinnerIntervals.setEnabled(true);
+                spinnerWordsPerDay.setEnabled(true);
                 chkSu.setEnabled(true);
                 chkMo.setEnabled(true);
                 chkTu.setEnabled(true);
@@ -372,18 +394,22 @@ public class SchedulerActivity extends PaymentActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         int id = item.getItemId();
-        if (id == android.R.id.home) {
+        if (id == android.R.id.home)
+        {
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    protected void onToolbarCreated() {
+    protected void onToolbarCreated()
+    {
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
+        if (actionBar != null)
+        {
             actionBar.setTitle("Scheduler");
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setDisplayShowHomeEnabled(true);
@@ -391,35 +417,28 @@ public class SchedulerActivity extends PaymentActivity {
     }
 
     @Override
-    protected void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
-        if (resultCode == Activity.RESULT_OK && requestCode == 5) {
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent intent)
+    {
+        if (resultCode == Activity.RESULT_OK && requestCode == 5)
+        {
             Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
             SystemSetting setting = SystemSettings.getCurrentSettings();
-            if (uri != null) {
+            if (uri != null)
+            {
                 Ringtone ringtone = RingtoneManager.getRingtone(this, uri);
                 String title = ringtone.getTitle(this);
                 setting.setRingingToneUri(uri.toString());
                 setting.setAlarmRingingTone(title);
                 btnSelectTone.setText(title);
-            } else {
+            }
+            else
+            {
                 setting.setRingingToneUri(Settings.System.DEFAULT_NOTIFICATION_URI.getPath());
                 Ringtone ringtone = RingtoneManager.getRingtone(App.context, Settings.System.DEFAULT_NOTIFICATION_URI);
                 setting.setAlarmRingingTone(ringtone.getTitle(this));
                 btnSelectTone.setText(ringtone.getTitle(this));
             }
             SystemSettings.update(setting);
-        } else if (requestCode == RC_REQUEST) {
-            super.onActivityResult(requestCode, resultCode, intent);
         }
-    }
-
-    @Override
-    protected void updateUiToPremiumVersion() {
-        destroyPaymentDialog();
-    }
-
-    @Override
-    protected void updateUiToTrialVersion() {
-        //nothing
     }
 }

@@ -40,7 +40,6 @@ public class SearchCache
         {
             Vocabulary vocabulary = vocabulariesCache.get(i);
             if (vocabulary.getVocabulary().toLowerCase().contains(searchText)
-                    || vocabulary.getVocabPersianDef().toLowerCase().contains(searchText)
                     || vocabulary.getVocabEnglishDef().toLowerCase().contains(searchText))
             {
                 searchResult.add(vocabulary);

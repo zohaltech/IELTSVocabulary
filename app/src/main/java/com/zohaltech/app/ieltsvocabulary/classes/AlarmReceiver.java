@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
 
 import com.zohaltech.app.ieltsvocabulary.R;
 import com.zohaltech.app.ieltsvocabulary.activities.VocabularyDetailsActivity;
@@ -15,10 +14,11 @@ import com.zohaltech.app.ieltsvocabulary.data.SystemSettings;
 import com.zohaltech.app.ieltsvocabulary.entities.SystemSetting;
 import com.zohaltech.app.ieltsvocabulary.serializables.Reminder;
 
-public class AlarmReceiver extends BroadcastReceiver {
-
+public class AlarmReceiver extends BroadcastReceiver
+{
     @Override
-    public void onReceive(Context context, Intent intent) {
+    public void onReceive(Context context, Intent intent)
+    {
         Reminder reminder = (Reminder) intent.getSerializableExtra("reminder");
 
         NotificationCompat.Builder builder =
@@ -54,6 +54,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         App.notificationManager.notify(reminder.getVocabularyId(), notification);
 
         ReminderManager.setLastReminder(reminder);
-        ReminderManager.setImmediateReminder(reminder.getVocabularyId(), reminder.doesTriggersNext());
+        ReminderManager.registerNextReminder(reminder.getVocabularyId(), reminder.doesTriggersNext());
     }
 }

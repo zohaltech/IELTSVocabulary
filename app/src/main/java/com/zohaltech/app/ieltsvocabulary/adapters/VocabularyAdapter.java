@@ -37,13 +37,6 @@ public class VocabularyAdapter extends RecyclerView.Adapter<VocabularyAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final Vocabulary vocabulary = vocabularies.get(position);
-        if (showExtra && position % 6 == 0) {
-            holder.txtSection.setVisibility(View.VISIBLE);
-            holder.txtSection.setText("DAY " + vocabulary.getDay());
-        } else {
-            holder.txtSection.setVisibility(View.GONE);
-        }
-
         if (vocabulary.getLearned()) {
             holder.imgLearned.setVisibility(View.VISIBLE);
         } else {
@@ -68,14 +61,12 @@ public class VocabularyAdapter extends RecyclerView.Adapter<VocabularyAdapter.Vi
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView  txtSection;
         public TextView  txtVocabulary;
         public ImageView imgLearned;
         LinearLayout layoutVocabulary;
 
         public ViewHolder(View view) {
             super(view);
-            txtSection = (TextView) view.findViewById(R.id.txtSection);
             layoutVocabulary = (LinearLayout) view.findViewById(R.id.layoutVocabulary);
             txtVocabulary = (TextView) view.findViewById(R.id.txtVocabulary);
             imgLearned = (ImageView) view.findViewById(R.id.imgLearned);

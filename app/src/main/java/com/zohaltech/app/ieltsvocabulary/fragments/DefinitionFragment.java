@@ -57,7 +57,7 @@ public class DefinitionFragment extends Fragment implements
 
         assert vocabulary != null;
         txtVocabEnglishDefinition.setText(vocabulary.getVocabEnglishDef());
-        txtVocabPersianMeaning.setText(vocabulary.getVocabPersianDef());
+
 //        txtVocabEnglishDefinition.setText(vocabulary.getEncEngDef());
 //        txtVocabPersianMeaning.setText(vocabulary.getEncPersianDef());
 

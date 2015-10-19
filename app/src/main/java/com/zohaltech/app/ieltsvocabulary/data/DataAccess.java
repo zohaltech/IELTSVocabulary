@@ -15,8 +15,8 @@ import com.zohaltech.app.ieltsvocabulary.entities.Theme;
 import java.io.InputStreamReader;
 
 public class DataAccess extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME    = "CORE_VOCABULARY";
-    public static final int    DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME    = "IELTS_VOCABULARIES";
+    public static final int    DATABASE_VERSION =4;
 
     public DataAccess() {
         super(App.context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -27,27 +27,16 @@ public class DataAccess extends SQLiteOpenHelper {
         try {
             db.execSQL(Themes.CreateTable);
             db.execSQL(Vocabularies.CreateTable);
-            db.execSQL(Examples.CreateTable);
+            db.execSQL(Sentences.CreateTable);
+            db.execSQL(VocabSentences.CreateTable);
             db.execSQL(Notes.CreateTable);
             db.execSQL(SystemSettings.CreateTable);
 
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(1, "Education", "education")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(2, "Job and Employment", "job")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(3, "Media", "media")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(4, "Health", "health")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(5, "Environment", "environment")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(6, "Advertising", "advertising")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(7, "Foreign Languages and Travel", "foreign_language")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(8, "Urbanisation and City Life", "urbanisation")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(9, "Ethical Issues – Crimes and Laws", "law")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(10, "Sports", "sport")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(11, "Space Research", "space")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(12, "Science", "science")));
-            db.insert(Themes.TableName, null, Themes.getContentValues(new Theme(13, "Collocations for Causes and Results", "causes")));
 
+            insertDataFromAsset(db, Themes.TableName, "data/categories.csv", ';');
+            insertDataFromAsset(db, Sentences.TableName, "data/sentences.csv", ';');
             insertDataFromAsset(db, Vocabularies.TableName, "data/vocabs.csv", ';');
-            insertDataFromAsset(db, Examples.TableName, "data/examples.csv", ';');
-            insertDataFromAsset(db, Notes.TableName, "data/notes.csv", ';');
+            insertDataFromAsset(db, VocabSentences.TableName, "data/vacab_sentence.csv", ';');
 
             ContentValues systemSettingsValues = new ContentValues();
             systemSettingsValues.put(SystemSettings.Installed, 0);

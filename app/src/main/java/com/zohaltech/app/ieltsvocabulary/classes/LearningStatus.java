@@ -49,7 +49,6 @@ public class LearningStatus {
                     learningStatus.setVocabCount(vocabCount);
                 } else {
                     learningStatus.setProgress(vocabIndex * 100 / vocabCount);
-                    learningStatus.setDayIndex(currentVocab.getDay());
                     learningStatus.setDayCount(vocabCount / 6);
                     learningStatus.setVocabIndex(vocabIndex);
                     learningStatus.setVocabCount(vocabCount);
