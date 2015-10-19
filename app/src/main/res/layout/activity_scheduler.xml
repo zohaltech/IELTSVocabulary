@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_start"
+                    android:text="Start"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:id="@+id/btnPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_pause"
+                    android:text="Pause"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:id="@+id/btnStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_stop"
+                    android:text="Stop"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:id="@+id/btnRestart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_restart"
+                    android:text="RESTART"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:orientation="horizontal">
+
+                        <widgets.LatinTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start theme: "
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            tools:ignore="HardcodedText"/>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinnerStartTheme"
+                            style="@style/FormButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@drawable/item_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:drawable/divider_horizontal_bright"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:orientation="horizontal">
+
+                        <widgets.LatinTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start time: "
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            tools:ignore="HardcodedText"/>
+
+                        <!--<EditText-->
+                        <!--android:id="@+id/edtStartTime"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:inputType="text"-->
+                        <!--android:text="08:00"-->
+                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                        <!--tools:ignore="HardcodedText"/>-->
+
+                        <widgets.MyButton
+                            android:id="@+id/btnStartTime"
+                            style="@style/FormButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="72dp"
+                            android:text="02:00"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/item_text"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:drawable/divider_horizontal_bright"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:orientation="horizontal">
+
+                        <widgets.LatinTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Interval: "
+                            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinnerIntervals"
+                            style="@style/FormButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <widgets.LatinTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text=" minutes"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            tools:ignore="HardcodedText"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:drawable/divider_horizontal_bright"/>
+
+                    <widgets.LatinTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Week days: "
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chkSu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="SU"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <CheckBox
+                            android:id="@+id/chkMo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="MO"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <CheckBox
+                            android:id="@+id/chkTu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="TU"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <CheckBox
+                            android:id="@+id/chkWe"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="WE"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <CheckBox
+                            android:id="@+id/chkTh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="TH"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <CheckBox
+                            android:id="@+id/chkFr"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="FR"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <CheckBox
+                            android:id="@+id/chkSa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="SA"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@drawable/day"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutRingtone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:drawable/divider_horizontal_bright"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:orientation="horizontal">
+
+                            <widgets.LatinTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Alarm tone: "
+                                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                            <widgets.MyButton
+                                android:id="@+id/btnSelectTone"
+                                style="@style/FormButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="72dp"
+                                android:singleLine="true"
+                                android:text="Default"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@drawable/item_text"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<Button-->
+                <!--android:id="@+id/btnGetStatus"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="GET STATUS"-->
+                <!--tools:ignore="HardcodedText"/>-->
+
+                <widgets.LatinTextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="STATUS : RUNNING"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layoutRoot"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <widgets.LatinTextView
+            android:id="@+id/txtVocabulary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/grey_lighter"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/green_dark"/>
+
+        <widgets.MyCheckBox
+            android:id="@+id/chkBookmark"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/bookmark"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabDescriptions"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:pstsIndicatorHeight="4dp"
+        app:pstsTextAllCaps="false"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerDescItems"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@android:color/white"/>
+
+</LinearLayout>

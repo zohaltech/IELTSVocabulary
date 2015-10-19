@@ -1,0 +1,533 @@
+Id;CategoryId;Vocabulary;EnglishDef
+1;1;adoring fans;people who love a particular band or singer
+2;1;background music;music that is played while something else is happening
+3;1;a catchy tune;a song that is easy to remember and makes you want to sing it
+4;1;classical music;music that is regarded as part of a long, formal tradition
+5;1;to download tracks;to obtain music from the Internet
+6;1;to have a great voice;to sing well
+7;1;to go on tour;to go on a planned series of performances around a region or country
+8;1;a huge following;a large number of fans
+9;1;live music;music that is listened to while it is performed (not recorded)
+10;1;live performance;(see live music)
+11;1;a massive hit;a record that sells lots of copies
+12;1;a music festival;music performances at a venue often over several days
+13;1;musical talent;skilled at music
+14;1;to be/sing out of tune;to not be in harmony/to sing the wrong notes
+15;1;a piece of music;an item of music
+16;1;to play by ear;to play without reading the musical notes
+17;1;a pop group;a small group of people who play or sing pop music together
+18;1;to read music;to understand and follow written musical notes
+19;1;a rock band;a group of musicians that play rock music
+20;1;to sing along to;"To join in singing.To sing a piece of music while someone else is singing or playing it."
+21;1;a sing-song;to sing informally, often with other people
+22;1;a slow number;a song with a slow tempo
+23;1;to take up a musical instrument;to begin learning a musical instrument
+24;1;taste in music;the music someone likes
+25;1;to be tone deaf;to be unable to distinguish the different notes in music
+26;2;boarded up shops;shops that are no longer doing business
+27;2;chain stores;well-known brands with shops in multiple cities
+28;2;to close down;to stop doing business
+29;2;fashionable boutiques;fashionable clothes shops
+30;2;to get around;to travel around
+31;2;high-rise flats;multi-story apartments
+32;2;inner-city;the central part of a city where people live and where condidions are often poor
+33;2;in the suburbs;the outer area of large towns and cities where people live
+34;2;lively bars/restaurants;bars or restaurants with a good atmosphere
+35;2;local facilities;local buildings or services serving the public
+36;2;multi-story car parks;car parks on several floors
+37;2;office block;a large building that contains offices
+38;2;out of town shopping centre/retail park;large shopping centres outside of the town or city
+39;2;pavement cafe;cafes with tables outside on the pavement
+40;2;places of interest;buildings that have a particular interest for visitors
+41;2;poor housing;housing that is not in good condition
+42;2;public spaces;areas in a town or city that are open to the public
+43;2;public transport system; public vehicles such as buses and trains that operate at regular times on fixed routes
+44;2;residential area;an area where people live
+45;2;run down;old and of a poor standard
+46;2;shopping centre;an area consisting of multiple shops
+47;2;shopping malls;large indoor shopping centres
+48;2;sprawling city;a city that has grown over time and which covers a wide area
+49;2;tourist attraction;a place of interest to tourists
+50;2;traffic congestion;heavy traffic making it difficult to move around a town or city
+51;2;upmarket shops;expensive fashionable shops
+52;3;to bear a striking resemblance;to look very similar to
+53;3;cropped hair;very short hair
+54;3;disheveled hair;untidy hair
+55;3;to dress up to the nines;to dress very smartly or glamorously
+56;3;fair hair;light-coloured hair
+57;3;to be fair-skinned;light skinned
+58;3;to get done up;to dress smartly
+59;3;to be getting on a bit;to be getting old
+60;3;to go grey;to have hair that is turning grey
+61;3;to be good looking;to be attractive
+62;3;to grow old gracefully;to act in a way that embraces the fact you are getting older
+63;3;to be hard of hearing;to find it difficult to hear
+64;3;in his/her 30s/40s;to be 20/30 something
+65;3;scruffy;dressed untidily
+66;3;to look young for your age;to look younger than you are
+67;3;"to lose one&#8217;s figure";to have a figure that has lost its toned shape
+68;3;complexion;natural skin colour and texture
+69;3;make up;cosmetics
+70;3;medium height;average height
+71;3;middle-aged;approximately between 45-65
+72;3;to never have a hair out of place;perfectly styled hair
+73;3;to be overweight;to weigh more than is regarded as healthy
+74;3;pointed face;the opposite of a round face
+75;3;shoulder-length hair;hair that comes down to the shoulders and no further
+76;3;slender figure;a figue that is tall and slim
+77;3;slim figure;attractively thin
+78;3;thick hair;a lot of hair
+79;3;to wear glasses;to use spectacles
+80;3;to be well-built;to be muscular
+81;3;to be well-turned out;to look smart
+82;3;youthful appearance;to look young
+83;4;to balance the books;to not spend more money than you are earning
+84;4;to be self-employed;to work for yourself/to not work for an employer
+85;4;to cold call;to make a sales call to someone without asking them for permission first
+86;4;cut throat competition;when one company lowers its prices, forcing other companies to do the same, sometimes to a point where business becomes unprofitable
+87;4;to do market research;"to do research into what potential customers would or wouldn&#8217;t buy"
+88;4;to draw up a business plan;to write a plan for a new business
+89;4;to drum up business;to try to get customers
+90;4;to earn a living;to earn money
+91;4;to go bust;when a business is forced to close because it is unsuccessful
+92;4;cash flow;the money coming in and going out of a business
+93;4;to go into business with;to join another person to start or expand a business
+94;4;to go it alone;to start your own business
+95;4;to go under;"(see &#8216;to go bust&#8217;)"
+96;4;to have a web presence;to have a website or social  media profile that showcases your business
+97;4;to launch a product;to start selling and promoting a new product
+98;4;to lay someone off;"when a company ends an employee&#8217;s contract of employment"
+99;4;lifestyle business;a business that is set up to bring in a sufficient income and no more
+100;4;to make a profit;to earn more money than it costs to run the business
+101;4;niche business;a business that serves a small, particular market
+102;4;to raise a company profile;to make more people aware of a business
+103;4;to run your own business;to have a business of your own
+104;4;sales figures;a report of the income a company generates through sales of products or services
+105;4;to set up a business;to start a business
+106;4;stiff competition;strong competition from other companies in the same area of work
+107;4;to take on employees;to employ people
+108;4;to take out a loan;to borrow money
+109;4;to win a contract;when a business gets legally-binding work with an individual or company
+110;4;to work for yourself;"(see &#8216;to be self-employed&#8217;)"
+111;5;to be the life and soul of the party;a fun person, someone who is the centre of activity
+112;5;to bend over backwards;to try very hard to help someone
+113;5;broad-minded;prepared to accept other views or behaviours
+114;5;easy-going;relaxed and not easily worried about anything
+115;5;extrovert;an energetic person who likes the company of others
+116;5;fair-minded;to treat people equally
+117;5;fun-loving;to enjoy having fun
+118;5;to hide one’s light under a bushel;"to hide one&#8217;s talents and skills"
+119;5;good company;enjoyable to socialise with
+120;5;good sense of humour;the ability to understand what is funny
+121;5;introvert;someone who is shy
+122;5;laid-back;"see &#8216;easy-going&#8217;"
+123;5;to lose one’s temper;to suddenly become angry
+124;5;narrow minded;"opposite of &#8216;broad-minded&#8217; (see above)"
+125;5;painfully shy;very shy
+126;5;to put others first;to think of others before yourself
+127;5;quick-tempered;to become angry quickly
+128;5;reserved;shy
+129;5;self-assured;confident
+130;5;self-centred;thinks only of oneself
+131;5;self-confident;"believes in one&#8217;s own ability or knowledge"
+132;5;self-effacing;"to not try to get the attention of others (especially in terms of hiding one&#8217;s skills or abilities)"
+133;5;to take after;to be like (often another member of the family)
+134;5;thick-skinned; not easily affected by criticism
+135;5;trustworthy;can be trusted
+136;5;two-faced;not honest or sincere. Will say one thing to someone to their face and another when they are not present.
+137;6;to be on trend;to be very fashionable
+138;6;casual clothes;not formal
+139;6;classic style;a simple, traditional style that is always fashionable
+140;6;designer label;a well-known company that makes (often expensive) clothing
+141;6;dressed to kill;wearing clothes that attract admirers
+142;6;to dress for the occasion;to wear clothes suitable for a particular event
+143;6;fashionable;in fashion
+144;6;fashion house;a company that sells (usually expensive) new styles in clothes
+145;6;fashion icon;a person who is famous for their sense of fashion
+146;6;fashion show;an event where modals show off the latest in fashion designs
+147;6;to get dressed up;to put on nice clothes, often to go out somewhere special
+148;6;to go out of fashion;to not be in fashion any more
+149;6;hand-me-downs;clothes that are passed down from older brothers or sisters to their younger siblings
+150;6;to have an eye for (fashion);to be a good judge of
+151;6;to have a sense of style;the ability to wear clothes that look stylish
+152;6;the height of fashion;very fashionable
+153;6;to keep up with the latest fashion;to wear the latest fashions
+154;6;to look good in;to wear something that suits you
+155;6;to mix and match;"to wear different styles or items of clothing that aren&#8217;t part of a set outfit"
+156;6;must-have;something that is highly fashionable and therefore in demand
+157;6;off the peg;clothing that is ready made
+158;6;old fashioned;not in fashion any more
+159;6;on the catwalk;the stage that modals walk along to show off the latest fashions
+160;6;a slave to fashion;someone who always feel the need to wear the latest fashions
+161;6;smart clothes;the kind of clothes worn for a formal event
+162;6;to suit someone;to look good on someone
+163;6;to take pride in one’s appearance;to pay attention to how one looks
+164;6;timeless;"something that doesn&#8217;t go out of fashion"
+165;6;vintage clothes;clothes from an earlier period
+166;6;well-dressed;to be dressed attractively
+167;7;(all the) mod cons;technology at home that makes jobs easier such as a washing machine, dishwasher etc.
+168;7;apartment block;a large building made up of smaller units of apartments
+169;7;back garden;a garden at the rear of the house
+170;7;detached house;a house that is not physically connected to another property
+171;7;to do up a property;to repair an old building
+172;7;dream home;a home you regard as perfect
+173;7;first-time buyer;someone buying a property for the first time, especially when taking out a loan (mortgage)
+174;7;fully-furnished;a rented property with all furniture included
+175;7;to get on the property ladder;to buy a property with the aim of buying another bigger or more expensive one later in life
+176;7;hall of residence;a college or university building where students live
+177;7;home comforts;things that make a home feel comfortable to live in
+178;7;house-hunting;looking for a property to live in
+179;7;house-warming party;a party to celebrate moving into a new home
+180;7;ideal home;a perfect home
+181;7;to live on campus;to live on the university or college grounds
+182;7;mobile home;a home that can be moved by a vehicle or one that has its own engine
+183;7;to move into;to begin to live in a property
+184;7;to own your own home;to have bought the property you live in
+185;7;to pay rent in advance;weekly or monthly rent paid at the beginning of the week or month
+186;7;permanent address;a fixed address
+187;7;property market;the buying and selling of land or buildings
+188;7;to put down a deposit;to pay an amount of money as the first in a series of future payments
+189;7;rented accommodation;property owned by someone else and for which a person pays a fixed amount to live in
+190;7;single room;a room for one person
+191;7;spacious room;a large room
+192;7;student digs;student accommodation
+193;7;the suburbs;a residential area on the edge of towns or cities
+194;7;to take out a mortgage;to borrow a large amount of money, paid back over several years, in order to buy a house
+195;7;terraced house;a house connected on both sides by other properties
+196;8;an action movie;a film with fast moving scenes, often containing violence
+197;8;to be engrossed in;to be completely focused on one thing
+198;8;bedtime reading;something to read in bed before you go to sleep
+199;8;to be a big reader;someone who reads a lot
+200;8;to be based on;to use as a modal
+201;8;a box office hit;a financially successful film
+202;8;to be heavy-going;difficult to read
+203;8;a blockbuster;a film that is a big commercial success
+204;8;to catch the latest movie;to see a film that has just come out
+205;8;the central character:;the main person in a film or book
+206;8;a classic;of the highest quality
+207;8;to come highly recommended;to be praised by another person
+208;8;couldn’t put it down;"wasn&#8217;t able to stop reading a book"
+209;8;an e-book;a digital book
+210;8;an e-reader;a device for reading e-books
+211;8;to flick through;to look quickly through a book
+212;8;to get a good/bad review;to receive positive or negative feedback
+213;8;to go on general release;when a film can be seen by the general public
+214;8;hardback;"a book with a rigid cover (see &#8216;paperback&#8217; below)"
+215;8;a historical novel;a story set in the past
+216;8;a low budget film;a film made with a small amount of money
+217;8;on the big screen;at the cinema
+218;8;a page turner;a book that you want to keep reading
+219;8;paperback;"a book with a flexible cover (see &#8216;hardback&#8217; above)"
+220;8;plot;the main events in a film or book
+221;8;to read something from cover to cover;to read a book from the first page to the last
+222;8;sci-fi;science fiction
+223;8;to see a film;"at the cinema (see &#8216;watch a film&#8217; below)"
+224;8;the setting;where the action takes place
+225;8;showings;performances of a film
+226;8;soundtrack;the music that accompanies a film
+227;8;special effects;the visuals or sounds that are added to a film which are difficult to produce naturally
+228;8;to take ou t (a book from the library);to borrow a book from the library
+229;8;to tell the story of;"to outline the details of someone&#8217;s life or an event"
+230;8;to watch a film;"on TV (see &#8216;to see a film&#8217; above)"
+231;9;aches and pains;minor pains that continue over a period of time
+232;9;to be a bit off colour;to feel a little ill
+233;9;to be at death’s door;(informal) to be very ill indeed
+234;9;to be on the mend;to be recovering after an illness
+235;9;to be over the worst;to have got through the most serious or uncomfortable stage of an illlness
+236;9;to be under the weather;(informal) to not feel well
+237;9;a blocked nose;when the nose has excess fluid due to a cold
+238;9;to catch a cold;to get a cold
+239;9;a check-up;a physical examination by a doctor
+240;9;a chesty cough;a cough caused by congestion around the lungs
+241;9;cuts and bruises;minor injuries
+242;9;to feel poorly;to feel ill
+243;9;as fit as a fiddle;to be very healthy
+244;9;to go down with a cold;to become ill
+245;9;to go private;to choose to be treated by commercial healthcare rather than by services offered by the state
+246;9;GP;General Practitioner (family doctor)
+247;9;to have a filling;to have a tooth repaired
+248;9;to have a tooth out;to have a tooth removed
+249;9;a heavy cold;a bad cold
+250;9;to make an appointment;to arrange a time to see the doctor
+251;9;to make a speedy recovery;to recover quickly from an illness
+252;9;to phone in sick;"to call work to explain you won&#8217;t be attending work due to illness"
+253;9;prescription charges;money the patient pays for medicine authorised by a doctor
+254;9;to pull a muscle;to strain a muscle
+255;9;a runny nose;a nose that has liquid coming out of it
+256;9;a sore throat;inflammation that causes pain when swallowing
+257;10;to be called for an interview;to be invited to attend an interview
+258;10;to be your own boss;to have your own business
+259;10;a dead-end job;a job with no promotional opportunities
+260;10;to do a job-share;to share the weekly hours of work with another person
+261;10;a good team player;somebody who can work well with other people
+262;10;full-time;the number of hours that people usually work in a complete week
+263;10;a heavy workload;to have a lot of work to do
+264;10;a high-powered job;an important or powerful job
+265;10;holiday entitlement;the number of days holiday allowed
+266;10;job satisfaction;the feeling of enjoying a job
+267;10;manual work;work that requires physical activity
+268;10;maternity leave;time off work given to a woman about to have a baby
+269;10;to meet a deadline;to finish a job by an agreed time
+270;10;a nine-to-five job;a normal job that consists of an 8 hour day (approximately)
+271;10;one of the perks of the job;an extra benefit you get from a job
+272;10;part-time;working less than full-time
+273;10;to run your own business;" = ‘to be your own boss’.
+to have a business of your own"
+274;10;to be self-employed;"see &#8216;to be your own boss&#8217;"
+275;10;sick leave;time allowed off work when sick
+276;10;to be stuck behind a desk;to be unhappy in an office job
+277;10;to be/get stuck in a rut;to be in a boring job that is hard to leave
+278;10;to take early retirement;to retire early (retire: to reach an age when you are allowed to stop working for a living)
+279;10;temporary work;work done for a limited time only
+280;10;voluntary work;to work without pay
+281;10;to be well paid;to earn a good salary
+282;10;working conditions;the hours, salary and other entitlements that comes with the job
+283;10;to work with your hands;to do manual work
+284;11;to attend classes;to go to classes
+285;11;bachelors degree;an undergraduate course which usually lasts 3-4 years
+286;11;boarding school;a school where pupils live during term time
+287;11;distance learning;a way of studying where tuition is carried out over the Internet or by post
+288;11;face-to-face classes;as opposed to distance learning the traditional way of studying in a classroom with colleagues and a teacher
+289;11;to fall behind with your studies;to progress less quickly than others
+290;11;to give feedback;"to offer guidance on a student&#8217;s work"
+291;11;a graduation ceremony;an event where a successful student receives his or her academic degree
+292;11;higher education;education, usually in a college or university, that is followed after high school or secondary school
+293;11;an intensive course;a course that offers lots of training in order to reach a goal in as short a time as possible
+294;11;to keep up with your studies;to not fall behind
+295;11;to learn something by heart;to memorize it
+296;11;a mature student;a student who is older than average and who has usually returned to education after a period at work
+297;11;masters degree;a period of study which often follows the completion of a bachelors degree or is undertaken by someone regarded as capable of a higher-level academic course
+298;11;to meet a deadline;to finish a job or task in the time allowed or agreed
+299;11;to play truant;to stay away from classes without permission
+300;11;private language school;an independent school run as a business concern
+301;11;public schools;exclusive independent schools in the UK
+302;11;a single-sex school;a school where only boys or girls attend (as opposed to a mixed-sex school)
+303;11;to sit an exam;to take an exam
+304;11;state school;a school paid for by public funds and available to the general public
+305;11;subject specialist;a teacher who has a great deal of knowledge about the subject they teach.
+306;11;to take a year out;to spend a year working or travelling before starting university
+307;11;tuition fees;the money paid for a course of study
+308;11;to work your way through university;to have a paid job whilst studying to support yourself financially
+309;12;to be full up;to eat to the point that you can no longer eat any more
+310;12;to be starving hungry;an exaggerated way of saying you are very hungry
+311;12;to bolt something down;to eat something very quickly
+312;12;to be dying of hunger;an exaggerated way of saying you are hungry
+313;12;to eat a balanced diet;to eat the correct types and amounts of food
+314;12;to eat like a horse;to eat a lot
+315;12;to follow a recipe;to cook a meal using instructions
+316;12;to foot the bill;to pay the bill
+317;12;a fussy eater;somebody who has their own very high standards about what to eat
+318;12;to grab a bite to eat;"to eat something quickly (when you&#8217;re in a rush)"
+319;12;to have a sweet tooth;to enjoy sugary food
+320;12;home-cooked food;food cooked at home from individual ingredients
+321;12;the main meal;  the most important meal of the day, usually eaten in the evening
+322;12;to make your mouth water;to make you feel very hungry for something
+323;12;to play with your food;to push food around the plate to avoid eating it
+324;12;processed food;commercially prepared food bought for convenience
+325;12;a quick snack;to eat a small amount of food between meals
+326;12;a ready meal;"see &#8216;processed food&#8217;"
+327;12;a slap up meal;a large meal
+328;12;to spoil your appetite;"to est something that will stop you feeling hungry when it&#8217;s meal-time."
+329;12;to tuck into;to eat something with pleasure
+330;12;to wine and dine;to entertain someone by treating them to food and drink
+331;12;to work up an appetite;to do physical work that leads to you becoming hungry
+332;13;an athletics meeting;an event where various athletics sports are held
+333;13;an athletics track;a running track
+334;13;an away game;a football match played in the opposing teams stadium
+335;13;a brisk walk;a fast walk
+336;13;to do judo;(not go or play)
+337;13;a football fan;someone who likes football
+338;13;a fitness programme;a schedule of activities to keep fit
+339;13;a football match;a game of football
+340;13;a football pitch;the surface on which you play football (as opposed to a stadium, which is the building)
+341;13;a football season;a period in the year when football is played
+342;13;to get into shape;to become fit
+343;13;to go jogging;to run around the streets
+344;13;a home game;  a football match played in the teams own stadium
+345;13;to keep fit;to stay in good physically condition
+346;13;to be out of condition;to not be physically fit
+347;13;a personal best;to achieve the best personal result so far in a sport
+348;13;a personal trainer;a sports coach that helps you on a one-to-one basis
+349;13;to play tennis/football;(not do or go)
+350;13;to run the marathon;to run a distance of 42.195 Kilometres
+351;13;a season ticket;a ticket that gives you entry to most of a team’s home games during the sporting year.
+352;13;to set a record;to achieve the best result in a sport
+353;13;a sports centre;a public building where people can do various sports
+354;13;sports facilities;the equipment and services needed to do a sport
+355;13;a squash/tennis/badminton court;the surface where you play these sports
+356;13;strenuous exercise;exercise that needs a lot of physical effort
+357;13;a strong swimmer;a good swimmer
+358;13;a swimming pool;the place where you swim
+359;13;to take up exercise;to start doing exercise
+360;13;to train hard;to train with a lot of effort
+361;14;to access websites/email;to locate
+362;14;to back up files;to make a copy of files in case of a computer problem
+363;14;to boot up;to start a computer
+364;14;to bookmark a webpage;to mark a webpage for future reference
+365;14;to browse websites;to look at websites
+366;14;a computer buff;an expert computer user
+367;14;to crash;to suddenly stop working
+368;14;to cut and paste;to move text or images from one place in a document to another place
+369;14;a desktop PC;"a computer that isn&#8217;t portable and remains in situ on a desk"
+370;14;digital editing;to edit digital materials like audio or video files
+371;14;download (podcasts);to save a copy of a file from the internet to your own device
+372;14;to enter a web address;to type the address of a website into the address bar of your browser
+373;14;a gadget;a technological tool like a mobile phone or camera
+374;14;to go online;to start using the Internet
+375;14;high-spec (laptop);powerful computer with top quality components
+376;14;Internet security;Internet safety
+377;14;intranet;a network of connected computers within an organisation that is not accessible by unauthorised visitors
+378;14;to navigate a website;to find your way around a website
+379;14;operating system;the software that tells the computer how to work
+380;14;send an attachment;send an email with an accompanying file
+381;14;social media;media used to interact with other people such as Facebook or Twitter
+382;14;to surf the web;to look at a series of websites one after the other
+383;14;a techie;somebody who has an interest in technology
+384;14;to upgrade;to obtain a more powerful or feature-rich computer or piece of software
+385;14;video conferencing;to see and hear people from different locations using the Internet
+386;14;wireless hotspot;a public place where you can access the Internet
+387;14;wireless network;a network where users can access the Internet without the use of fixed cables
+388;14;word processing;
+389;15;to break up;to end a romantic relationship
+390;15;to drift apart;to become less close to someone
+391;15;"to enjoy someone&#8217;s company";to like spending time with someone
+392;15;to fall for;to fall in love
+393;15;to fall head over heels in love;to start to love someone a lot
+394;15;to fall out with;to have a disagreement and stop being friends
+395;15;to get on like a house on fire;"to like someone&#8217;s company very much indeed"
+396;15;to get on well with;to understand someone and enjoy similar interests
+397;15;to get to know;to begin to know someone
+398;15;to go back years;to have known someone for a long time
+399;15;to have a lot in common;to share similar interests
+400;15;to have ups and downs;to have good and bad times
+401;15;a healthy relationship;a good, positive relationship
+402;15;to hit it off;to quickly become good friends with
+403;15;to be in a relationship;to be romantically involved with someone
+404;15;to be just good friends;to not be romantically involved
+405;15;to keep in touch with;to keep in contact with
+406;15;to lose touch with;to not see or hear from someone any longer
+407;15;love at first sight;to fall in love immediately you meet someone
+408;15;to pop the question;to ask someone to marry you
+409;15;to see eye to eye on;to agree on a subject
+410;15;to settle down;to give up the single life and start a family
+411;15;to strike up a relationship; to begin a friendship
+412;15;to tie the knot;to get married
+413;15;to be well matched;to be similar to
+414;15;to work at a relationship;to try to maintain a positive relationship with someone
+415;16;all-in package/package holiday;a holiday where you purchase the travel and accommodation together
+416;16;breathtaking view;an extremely beautiful view
+417;16;charter-flight;a cheaper form of flying than a scheduled flight
+418;16;check-in desk;the place at the airport where you register for your flight and deposit your luggage
+419;16;departure lounge;where you wait for your flight to be called
+420;16;far-off destination;somewhere a long way away
+421;16;to get away from it all;to take a holiday to escape a busy or stressful lifestyle
+422;16;guided tour;an organised group shown around a place of interest by an expert
+423;16;holiday brochure;a glossy publication with details of holiday packages
+424;16;holiday destination;where you go for a holiday
+425;16;holiday of a lifetime;a special holiday that you are unlikely to repeat
+426;16;holiday resort;a place where lots of people go for a holiday
+427;16;hordes of tourists;crowds of tourists
+428;16;local crafts;objects produced locally
+429;16;long weekend;an extended weekend holiday including Friday or Monday
+430;16;out of season;outside of the main holiday period
+431;16;picturesque village;very pretty village
+432;16;passport control;the place where your passport is checked
+433;16;places of interest;sites of interest to tourists
+434;16;wildlife safari;a holiday, often in Africa, to observe wild animals
+435;16;self-catering;a holiday where you supply your own food
+436;16;short break;a short holiday
+437;16;to go sightseeing; to look around the tourist sites
+438;16;stunning landscape;extremely beautiful countryside
+439;16;travel agent;a shop that specialises in booking holidays
+440;16;tourist trap;somewhere where too many tourists go
+441;16;youth hostel;a cheap form of accommodation
+1825;39;You can say that again!;I totally agree with you
+1826;39;having said that;despite this
+1827;39;there is something to be said for;It has some advantages
+1828;39;to say the least;it is in fact even more important than I have just said
+1829;39;When all is said and done;"After everything else; remember this"
+1830;39;Needless to say;This is to be totally expected
+1831;39;That is to say;In other words
+1832;39;have a say;be involved in making a decision
+1833;40;The Environment;The air, water and land in or on which people, animals and plants live.
+1834;40;Climate;The weather conditions generally present in an area or over a long period.
+1835;40;Climate Change;The change in global climate patterns which appeared from the mid to late 20th century onwards, caused mainly by the increased levels of carbon dioxide in the atmosphere.
+1836;40;Carbon Dioxide (CO2);The gas formed when carbon is burned, or when people or animals breathe out.
+1837;40;Fossil Fuels;A natural fuel such as coal, gas, or oil formed in the geological past from the remains of living organisms.
+1838;40;Global Warming;"A gradual rise in the world&#39;s temperatures caused by polluting gases such as carbon dioxide which are collecting in the air around the Earth and preventing heat escaping into space."
+1839;40;Deforestation;Cutting down and clearing areas of forest.
+1840;40;Habitat;The natural environment in which an animal or plant usually lives.
+1841;40;Ecosystem;All the living things in an area and the way they affect each other and the environment.
+1842;40;Biodiversity;The variety of plant and animal life in the world or in a particular habitat, a high level of which is usually considered to be important and desirable.
+1843;40;Contamination;To make something less pure by exposing it to poisonous or polluting substances.
+1844;40;Toxic / Toxin;Poisonous / A poisonous substance
+1845;40;Waste;A material or substance which is eliminated or discarded as no longer useful or required after the completion of a process
+1846;40;Emission;The production and discharge of something.
+1847;40;Erosion;To graually reduce or destroy
+1848;40;Drought;A prolonged period of abnormally low rainfall, leading to a shortage of water.
+1849;40;Pollution;"<p>Damage caused to water, air, land etc. by harmful substances or waste.</p>
+"
+1850;41;The Arts;Art forms created by humans, divided into visual, literary, and performing.
+1851;41;Musical;A play or film in which part of the story is sung to music
+1852;41;Opera;An art form in which singers and musicians perform a dramatic work combining text and music, usually in a theatre.
+1853;41;Theatre;A building, room, or outside structure with rows of seats, each row usually higher than the one in front, from which people can watch a performance or other activity.
+1854;41;Performance;A show or action involving the entertaining of other people by dancing, singing, acting, or playing music.
+1855;41;Festival;An organized set of special events, such as musical, art or film performances.
+1856;41;Sculpture;The art of making two- or three-dimensional representative or abstract forms, especially by carving stone or wood.
+1857;41;Inspired;To be filled with the urge or ability to do or feel something, especially to do something creative.
+1858;41;Artefact;An object that is made by a person, such as a tool or a decoration, especially one that is of historical interest.
+1859;41;Choreograph;Compose the sequence of steps and moves for a ballet or other performance of dance.
+1860;42;hang out;spend time relaxing (informal)
+1861;42;catch up with;Meet someone after a period of time and find out what they have been doing
+1862;42;cut down/back on;Reducegive (something) up Quit / stop doing it
+1863;42;cut out;Stop eating something (permanently or for a long time)
+1864;42;find out;Discover
+1865;42;get along/on;Like each other
+1866;42;fall out;Argue and be on bad terms with someone
+1867;42;clean up;Tidy / Clean
+1868;42;come across;Find something unexpectedly
+1869;42;hand (something) in;Submit
+1870;42;get away with (something);Do something without being noticed or punished
+1871;42;keep up with;Continue at the same rate
+1872;42;end up;"To become eventually; turn out to be"
+1873;42;fall behind;"To fail to keep up a pace; lag behind"
+1874;42;drop out;"Quit a class, school, university&hellip;"
+1875;42;look back on;Think about something that happened in the past
+1876;42;put forward;Suggest or state the case for something
+1877;42;pull out of;To stop being a part of something
+1878;42;get something across/over;Make understandable or communicate
+1879;42;get around;To have mobility
+1880;42;get away;To go on holiday / vacation
+1881;42;get back at someone;To get revenge
+1882;42;get back into;Become interested in something again
+1883;42;get by;To have just enough of something such as money or knowledge
+1884;42;get down to;Start doing something seriously or with a lot of effort
+1885;42;get over something;Recover from something, like an illness or a problem
+1886;42;get round to something;To find time to do something
+1887;42;get through;To survive something
+1888;42;get together;Social meeting
+1889;42;get up;Get out of bed
+1890;43;Overweight;Fat
+1891;43;Obesity;Extrememly fat or overweight.
+1892;43;Eating Disorder;A mental illness in which people eat far too little or far too much food and are unhappy with their bodies.
+1893;43;Nutrients;Any substance which plants or animals need in order to live and grow.
+1894;43;Diet;The food and drink usually eaten or drunk by a person or group.
+1895;43;Overeating;Eating more than your body needs.
+1896;43;Ingredients;A food that is used with other foods in the preparation of a particular dish.
+1897;43;Allergy;A condition that makes a person become ill or develop skin or breathing problems because they have eaten certain foods or been near certain substances.
+1898;43;Additive;A substance which is added to food in order to improve its taste or appearance or to preserve it.
+1899;43;Prevent;To stop something from happening.
+1900;43;Variety;Often changing and being different.
+1901;43;Regular;Happening or doing something often.
+1902;43;Vitamins;Any of a group of natural substances which are necessary in small amounts for the growth and good health of the body.
+1903;43;Diabetes;A disease in which the body cannot control the level of sugar in the blood.
+1904;43;Health;The condition of the body and the degree to which it is free from illness, or the state of being well.
+1905;44;Punish;To cause someone who has done something wrong or committed a crime to suffer, by hurting them, forcing them to pay money, sending them to prison
+1906;44;Prevention;When you stop something from happening or stop someone from doing something.
+1907;44;Criminal;A person who commits a crime.
+1908;44;Imprisonment;Being put in prison.
+1909;44;Community Service;Work that people do to help other people without payment, and which young criminals whose crime was not serious enough for them to be put in prison are sometimes ordered to do.
+1910;44;Justice;Fairness in the way people are dealt with.
+1911;44;Victim;Someone who has suffered because of the actions of someone else.
+1912;40;Atmosphere ;the mixture of gases that surround the Earth
+1913;40;Biodegradable;materials and chemicals that are biodegradable are changed naturally by bacteria into substances that do not harm the environment

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <widgets.MyButton
+                    android:id="@+id/btnSpeechUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableRight="@drawable/ic_sound"
+                    android:text="US"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <widgets.MyButton
+                    android:id="@+id/btnSpeechUK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableRight="@drawable/ic_sound"
+                    android:textStyle="bold"
+                    android:text="UK"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+            </LinearLayout>
+
+            <widgets.LatinTextView
+                android:id="@+id/txtVocabEnglishDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green_light"
+                android:gravity="start|center"
+                android:padding="15dp"
+                android:text="Place a premium on something"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/primary_text"/>
+
+            <widgets.PersianTextView
+                android:id="@+id/txtVocabPersianMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:padding="15dp"
+                android:text="Place a premium on something else"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/secondary_text"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
