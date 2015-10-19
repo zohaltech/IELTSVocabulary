@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.zohaltech.app.ieltsvocabulary.classes.CoreSec;
 import com.zohaltech.app.ieltsvocabulary.classes.MyRuntimeException;
 import com.zohaltech.app.ieltsvocabulary.entities.Example;
 
@@ -45,8 +44,8 @@ public class Examples {
                     Example example = new Example(cursor.getInt(cursor.getColumnIndex(Id)),
                             cursor.getInt(cursor.getColumnIndex(VocabularyId)),
                             cursor.getInt(cursor.getColumnIndex(Ordinal)),
-                            CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(English))),
-                            CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(Persian))));
+                            cursor.getString(cursor.getColumnIndex(English)),
+                            cursor.getString(cursor.getColumnIndex(Persian)));
 
                     examples.add(example);
                 } while (cursor.moveToNext());

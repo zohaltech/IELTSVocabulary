@@ -4,20 +4,19 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.zohaltech.app.ieltsvocabulary.classes.CoreSec;
 import com.zohaltech.app.ieltsvocabulary.classes.MyRuntimeException;
 import com.zohaltech.app.ieltsvocabulary.entities.Vocabulary;
 
 import java.util.ArrayList;
 
 public class Vocabularies {
- public static final String TableName  = "Vocabularies";
- public static final String Id         = "Id";
- public static final String ThemeId    = "ThemeId";
- public static final String Vocabulary = "Vocabulary";
- public static final String EnglishDef = "EnglishDef";
- public static final String Learned    = "Learned";
- public static final String Bookmarked = "Bookmarked";
+    public static final String TableName  = "Vocabularies";
+    public static final String Id         = "Id";
+    public static final String ThemeId    = "ThemeId";
+    public static final String Vocabulary = "Vocabulary";
+    public static final String EnglishDef = "EnglishDef";
+    public static final String Learned    = "Learned";
+    public static final String Bookmarked = "Bookmarked";
 
     static final String CreateTable = "CREATE TABLE " + TableName + " ( " +
                                       Id + " INTEGER PRIMARY KEY NOT NULL, " +
@@ -42,8 +41,8 @@ public class Vocabularies {
                 do {
                     Vocabulary vocabulary = new Vocabulary(cursor.getInt(cursor.getColumnIndex(Id)),
                                                            cursor.getInt(cursor.getColumnIndex(ThemeId)),
-                                                           CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(Vocabulary))),
-                                                           CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(EnglishDef))),
+                                                           cursor.getString(cursor.getColumnIndex(Vocabulary)),
+                                                           cursor.getString(cursor.getColumnIndex(EnglishDef)),
                                                            cursor.getInt(cursor.getColumnIndex(Learned)) == 1,
                                                            cursor.getInt(cursor.getColumnIndex(Bookmarked)) == 1);
 

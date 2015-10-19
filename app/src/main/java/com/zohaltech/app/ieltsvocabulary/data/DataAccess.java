@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
 
 public class DataAccess extends SQLiteOpenHelper {
     public static final String DATABASE_NAME    = "IELTS_VOCABULARIES";
-    public static final int    DATABASE_VERSION =4;
+    public static final int    DATABASE_VERSION =7;
 
     public DataAccess() {
         super(App.context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -62,7 +62,8 @@ public class DataAccess extends SQLiteOpenHelper {
         try {
             database.execSQL(Themes.DropTable);
             database.execSQL(Vocabularies.DropTable);
-            database.execSQL(Examples.DropTable);
+            database.execSQL(Sentences.DropTable);
+            database.execSQL(VocabSentences.DropTable);
             database.execSQL(Notes.DropTable);
             database.execSQL(SystemSettings.DropTable);
 

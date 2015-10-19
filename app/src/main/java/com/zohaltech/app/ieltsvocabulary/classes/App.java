@@ -41,7 +41,6 @@ public class App extends Application {
     public static String            marketPollUri;
     public static String            marketPollIntent;
     public static String            marketPublicKey;
-    public static SearchCache       searchCache;
 
     public static NotificationManager notificationManager;
 
@@ -67,7 +66,6 @@ public class App extends Application {
         screenWidth = getResources().getDisplayMetrics().widthPixels;
         screenHeight = getResources().getDisplayMetrics().heightPixels;
         setAppLocal();
-        SearchCache.initialise();
 
         //todo : set market here and in manifest
         market = MARKET_BAZAAR;
