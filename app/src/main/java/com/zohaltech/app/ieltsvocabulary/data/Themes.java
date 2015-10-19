@@ -12,15 +12,12 @@ import java.util.ArrayList;
 public class Themes {
     static final String TableName = "Themes";
     static final String Id        = "Id";
-    static final String Level     = "Level";
     static final String Name      = "Name";
-    static final String IconName  = "IconName";
 
     static final String CreateTable = "CREATE TABLE " + TableName + " ( " +
                                       Id + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
-                                      Level + " INTEGER , " +
-                                      Name + " VARCHAR(50) ," +
-                                      IconName + " VARCHAR(50));";
+                                      Name + " VARCHAR(50) );" ;
+
     static final String DropTable   = "Drop Table If Exists " + TableName;
 
     private static ArrayList<Theme> select(String whereClause, String[] selectionArgs) {
@@ -35,9 +32,8 @@ public class Themes {
             if (cursor != null && cursor.moveToFirst()) {
                 do {
                     Theme theme = new Theme(cursor.getInt(cursor.getColumnIndex(Id)),
-                                            cursor.getInt(cursor.getColumnIndex(Level)),
-                                            cursor.getString(cursor.getColumnIndex(Name)),
-                                            cursor.getString(cursor.getColumnIndex(IconName)));
+                                            cursor.getString(cursor.getColumnIndex(Name)));
+
 
                     themeList.add(theme);
                 } while (cursor.moveToNext());
@@ -79,9 +75,7 @@ public class Themes {
     public static ContentValues getContentValues(Theme theme) {
         ContentValues values = new ContentValues();
 
-        values.put(Level, theme.getLevel());
         values.put(Name, theme.getName());
-        values.put(IconName, theme.getIconName());
 
         return values;
     }

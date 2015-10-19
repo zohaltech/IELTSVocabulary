@@ -14,22 +14,18 @@ public class Vocabularies {
     static final String TableName  = "Vocabularies";
     static final String Id         = "Id";
     static final String ThemeId    = "ThemeId";
-    static final String Day        = "Day";
     static final String Vocabulary = "Vocabulary";
     static final String EnglishDef = "EnglishDef";
-    static final String PersianDef = "PersianDef";
     static final String Learned    = "Learned";
     static final String Bookmarked = "Bookmarked";
 
     static final String CreateTable = "CREATE TABLE " + TableName + " ( " +
-            Id + " INTEGER PRIMARY KEY NOT NULL, " +
-            ThemeId + " INTEGER REFERENCES " + Themes.TableName + " (" + Themes.Id + "), " +
-            Day + " INTEGER, " +
-            Vocabulary + " VARCHAR(250), " +
-            EnglishDef + " VARCHAR(1024)," +
-            PersianDef + " VARCHAR(1024), " +
-            Learned + " Boolean DEFAULT (0), " +
-            Bookmarked + " Boolean DEFAULT (0) );";
+                                      Id + " INTEGER PRIMARY KEY NOT NULL, " +
+                                      ThemeId + " INTEGER REFERENCES " + Themes.TableName + " (" + Themes.Id + "), " +
+                                      Vocabulary + " VARCHAR(250), " +
+                                      EnglishDef + " VARCHAR(1024)," +
+                                      Learned + " Boolean DEFAULT (0), " +
+                                      Bookmarked + " Boolean DEFAULT (0) );";
 
     static final String DropTable = "Drop Table If Exists " + TableName;
 
@@ -45,13 +41,11 @@ public class Vocabularies {
             if (cursor != null && cursor.moveToFirst()) {
                 do {
                     Vocabulary vocabulary = new Vocabulary(cursor.getInt(cursor.getColumnIndex(Id)),
-                            cursor.getInt(cursor.getColumnIndex(ThemeId)),
-                            cursor.getInt(cursor.getColumnIndex(Day)),
-                            CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(Vocabulary))),
-                            CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(EnglishDef))),
-                            CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(PersianDef)).replace('|', '\n')),
-                            cursor.getInt(cursor.getColumnIndex(Learned)) == 1,
-                            cursor.getInt(cursor.getColumnIndex(Bookmarked)) == 1);
+                                                           cursor.getInt(cursor.getColumnIndex(ThemeId)),
+                                                           CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(Vocabulary))),
+                                                           CoreSec.decrypt(cursor.getString(cursor.getColumnIndex(EnglishDef))),
+                                                           cursor.getInt(cursor.getColumnIndex(Learned)) == 1,
+                                                           cursor.getInt(cursor.getColumnIndex(Bookmarked)) == 1);
 
                     vocabularies.add(vocabulary);
                 } while (cursor.moveToNext());
@@ -71,12 +65,6 @@ public class Vocabularies {
         return select("", null, "");
     }
 
-    public static ArrayList<Vocabulary> selectSiblings(long vocabularyId) {
-        Vocabulary vocabulary = select(vocabularyId);
-        assert vocabulary != null;
-
-        return select("Where " + ThemeId + " = ? AND " + Day + " = ? ", new String[]{"" + vocabulary.getThemeId(), vocabulary.getDay() + ""}, "");
-    }
 
     public static ArrayList<Vocabulary> selectBookmarks() {
         return select("Where " + Bookmarked + " = ? ", new String[]{"1"}, "");
@@ -107,16 +95,13 @@ public class Vocabularies {
 
     public static ArrayList<Vocabulary> search(String searchText) {
         String query = "SELECT DISTINCT v.* FROM " + TableName + " v\n" +
-                "INNER JOIN " + Examples.TableName + " e\n" +
-                "ON v.Id=e." + Examples.VocabularyId + "\n" +
-                "LEFT JOIN " + Notes.TableName + " n\n" +
-                "ON v.Id=n." + Notes.VocabularyId + "\n" +
-                "WHERE v." + Vocabulary + " LIKE '%" + searchText + "%'\n" +
-                "OR v." + EnglishDef + "  LIKE '%" + searchText + "%'\n" +
-                "OR v." + PersianDef + "  LIKE '%" + searchText + "%'\n" +
-                "OR e." + Examples.English + " LIKE '%" + searchText + "%'\n" +
-                "OR e." + Examples.Persian + " LIKE '%" + searchText + "%'\n" +
-                "OR n." + Notes.Description + " LIKE '%" + searchText + "%'";
+                       "INNER JOIN " + Examples.TableName + " e\n" +
+                       "ON v.Id=e." + Examples.VocabularyId + "\n" +
+                       "LEFT JOIN " + Notes.TableName + " n\n" +
+                       "ON v.Id=n." + Notes.VocabularyId + "\n" +
+                       "WHERE v." + Vocabulary + " LIKE '%" + searchText + "%'\n" +
+                       "OR v." + EnglishDef + "  LIKE '%" + searchText + "%'\n";
+
 
         ArrayList<Vocabulary> vocabularies = new ArrayList<>();
         DataAccess da = new DataAccess();
@@ -128,13 +113,11 @@ public class Vocabularies {
             if (cursor != null && cursor.moveToFirst()) {
                 do {
                     Vocabulary vocabulary = new Vocabulary(cursor.getInt(cursor.getColumnIndex(Id)),
-                            cursor.getInt(cursor.getColumnIndex(ThemeId)),
-                            cursor.getInt(cursor.getColumnIndex(Day)),
-                            cursor.getString(cursor.getColumnIndex(Vocabulary)),
-                            cursor.getString(cursor.getColumnIndex(EnglishDef)),
-                            cursor.getString(cursor.getColumnIndex(PersianDef)),
-                            cursor.getInt(cursor.getColumnIndex(Learned)) == 1,
-                            cursor.getInt(cursor.getColumnIndex(Bookmarked)) == 1);
+                                                           cursor.getInt(cursor.getColumnIndex(ThemeId)),
+                                                           cursor.getString(cursor.getColumnIndex(Vocabulary)),
+                                                           cursor.getString(cursor.getColumnIndex(EnglishDef)),
+                                                           cursor.getInt(cursor.getColumnIndex(Learned)) == 1,
+                                                           cursor.getInt(cursor.getColumnIndex(Bookmarked)) == 1);
 
                     vocabularies.add(vocabulary);
                 } while (cursor.moveToNext());
@@ -168,10 +151,8 @@ public class Vocabularies {
         ContentValues values = new ContentValues();
         values.put(Id, vocabulary.getId());
         values.put(ThemeId, vocabulary.getThemeId());
-        values.put(Day, vocabulary.getDay());
         values.put(Vocabulary, vocabulary.getVocabulary());
         values.put(EnglishDef, vocabulary.getVocabEnglishDef());
-        values.put(PersianDef, vocabulary.getVocabPersianDef());
         values.put(Learned, vocabulary.getLearned());
         values.put(Bookmarked, vocabulary.getBookmarked());
 

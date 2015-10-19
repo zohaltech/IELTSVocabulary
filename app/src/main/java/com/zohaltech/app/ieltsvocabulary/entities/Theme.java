@@ -4,19 +4,18 @@ import java.io.Serializable;
 
 public class Theme implements Serializable {
     private int    id;
-    private int    level;
     private String name;
-    private String iconName;
 
-    public Theme(int id, int level, String name, String iconName) {
-        this(level, name, iconName);
+
+    public Theme(int id,  String name) {
+        this( name);
         this.id = id;
     }
 
-    public Theme(int level, String name, String iconName) {
-        setLevel(level);
+    public Theme( String name) {
+
         setName(name);
-        setIconName(iconName);
+
     }
 
     public int getId() {
@@ -27,13 +26,7 @@ public class Theme implements Serializable {
         this.id = id;
     }
 
-    public int getLevel() {
-        return level;
-    }
 
-    public void setLevel(int level) {
-        this.level = level;
-    }
 
     public String getName() {
         return name;
@@ -43,11 +36,5 @@ public class Theme implements Serializable {
         this.name = name;
     }
 
-    public String getIconName() {
-        return iconName;
-    }
 
-    public void setIconName(String iconName) {
-        this.iconName = iconName;
-    }
 }

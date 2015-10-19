@@ -1,4 +1,4 @@
-Id;CategoryId;Vocabulary;EnglishDef
+Id;ThemeId;Vocabulary;EnglishDef
 1;1;adoring fans;people who love a particular band or singer
 2;1;background music;music that is played while something else is happening
 3;1;a catchy tune;a song that is easy to remember and makes you want to sing it
@@ -271,7 +271,8 @@ Id;CategoryId;Vocabulary;EnglishDef
 270;10;a nine-to-five job;a normal job that consists of an 8 hour day (approximately)
 271;10;one of the perks of the job;an extra benefit you get from a job
 272;10;part-time;working less than full-time
-273;10;to run your own business;" = ‘to be your own boss’.
+273;10;to run your own business;" = ‘to be your own boss’.
+
 to have a business of your own"
 274;10;to be self-employed;"see &#8216;to be your own boss&#8217;"
 275;10;sick leave;time allowed off work when sick
@@ -465,7 +466,8 @@ to have a business of your own"
 1846;40;Emission;The production and discharge of something.
 1847;40;Erosion;To graually reduce or destroy
 1848;40;Drought;A prolonged period of abnormally low rainfall, leading to a shortage of water.
-1849;40;Pollution;"<p>Damage caused to water, air, land etc. by harmful substances or waste.</p>
+1849;40;Pollution;"<p>Damage caused to water, air, land etc. by harmful substances or waste.</p>
+
 "
 1850;41;The Arts;Art forms created by humans, divided into visual, literary, and performing.
 1851;41;Musical;A play or film in which part of the story is sung to music
