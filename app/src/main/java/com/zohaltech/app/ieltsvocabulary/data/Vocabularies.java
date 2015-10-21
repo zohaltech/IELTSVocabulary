@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.zohaltech.app.ieltsvocabulary.classes.MyRuntimeException;
+import com.zohaltech.app.ieltsvocabulary.entities.Sentence;
 import com.zohaltech.app.ieltsvocabulary.entities.Vocabulary;
 
 import java.util.ArrayList;
@@ -93,9 +94,10 @@ public class Vocabularies {
     }
 
     public static ArrayList<Vocabulary> search(String searchText) {
+        //TODO Search
         String query = "SELECT DISTINCT v.* FROM " + TableName + " v\n" +
-                       "INNER JOIN " + Examples.TableName + " e\n" +
-                       "ON v.Id=e." + Examples.VocabularyId + "\n" +
+                       "INNER JOIN " + Sentences.TableName + " e\n" +
+                     //  "ON v.Id=e." + Sentences.VocabularyId + "\n" +
                        "LEFT JOIN " + Notes.TableName + " n\n" +
                        "ON v.Id=n." + Notes.VocabularyId + "\n" +
                        "WHERE v." + Vocabulary + " LIKE '%" + searchText + "%'\n" +

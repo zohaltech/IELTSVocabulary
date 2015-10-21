@@ -164,7 +164,7 @@ public class MainActivity extends PaymentActivity {
 
     //    private void EncryptVocabs() {
     //        ArrayList<Vocabulary> vocabularies = Vocabularies.select();
-    //        ArrayList<Example> examples = Examples.select();
+    //        ArrayList<Example> sentences = Examples.select();
     //
     //        for (Vocabulary vocabulary : vocabularies) {
     //            try {
@@ -195,7 +195,7 @@ public class MainActivity extends PaymentActivity {
     //        //                e.printStackTrace();
     //        //            }
     //        //        }
-    //        for (Example example : examples) {
+    //        for (Example example : sentences) {
     //            try {
     //                example.setEncEnglish(CoreSec.encrypt(example.getEnglish()));
     //                example.setEncPersian(CoreSec.encrypt(example.getPersian()));

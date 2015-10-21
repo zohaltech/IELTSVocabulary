@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.zohaltech.app.ieltsvocabulary.fragments.DefinitionFragment;
-import com.zohaltech.app.ieltsvocabulary.fragments.ExamplesFragment;
+import com.zohaltech.app.ieltsvocabulary.fragments.SentenceFragment;
 import com.zohaltech.app.ieltsvocabulary.fragments.NotesFragment;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class DescriptionPagerAdapter extends FragmentPagerAdapter {
         if (position == 0)
             return DefinitionFragment.newInstance(vocabId);
         else if (position == 1)
-            return ExamplesFragment.newInstance(vocabId);
+            return SentenceFragment.newInstance(vocabId);
         else
             return NotesFragment.newInstance(vocabId);
     }

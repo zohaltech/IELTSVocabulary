@@ -23,14 +23,14 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/primary_text"/>
 
-        <widgets.PersianTextView
-            android:id="@+id/txtExamplePersian"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:padding="15dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/secondary_text"/>
+        <!--<widgets.PersianTextView-->
+            <!--android:id="@+id/txtExamplePersian"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="?attr/selectableItemBackground"-->
+            <!--android:padding="15dp"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textColor="@color/secondary_text"/>-->
 
     </LinearLayout>
 

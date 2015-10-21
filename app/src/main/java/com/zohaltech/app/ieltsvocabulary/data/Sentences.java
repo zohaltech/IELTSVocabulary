@@ -1,6 +1,5 @@
 package com.zohaltech.app.ieltsvocabulary.data;
 
-
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -32,8 +31,6 @@ public class Sentences {
                 do {
                     Sentence sentence = new Sentence(cursor.getInt(cursor.getColumnIndex(Id)),
                                                      cursor.getString(cursor.getColumnIndex(Text)));
-
-
                     sentences.add(sentence);
                 } while (cursor.moveToNext());
             }
@@ -52,12 +49,44 @@ public class Sentences {
         return select("", null);
     }
 
-    public static Sentence select(long themeId) {
-        ArrayList<Sentence> sentences = select("Where " + Id + " = ? ", new String[]{String.valueOf(themeId)});
+    public static Sentence select(int id) {
+        ArrayList<Sentence> sentences = select("Where " + Id + " = ? ", new String[]{String.valueOf(id)});
         if (sentences.size() == 1) {
             return sentences.get(0);
         } else {
             return null;
         }
+    }
+
+    public static ArrayList<Sentence> getVocabSentences(int vocabId) {
+        String query = "SELECT s." + Id + ",s." + Text + " FROM " + VocabSentences.TableName + " vs\n" +
+                       "INNER JOIN " + TableName + " s\n" +
+                       "ON vs.SentenceId=s.Id\n" +
+                       "WHERE vs.VocabId=" + vocabId;
+
+        ArrayList<Sentence> sentences = new ArrayList<>();
+        DataAccess da = new DataAccess();
+        SQLiteDatabase db = da.getReadableDB();
+        Cursor cursor = null;
+
+        try {
+
+            cursor = db.rawQuery(query, null);
+            if (cursor != null && cursor.moveToFirst()) {
+                do {
+                    Sentence sentence = new Sentence(cursor.getInt(cursor.getColumnIndex(Id)),
+                                                     cursor.getString(cursor.getColumnIndex(Text)));
+                    sentences.add(sentence);
+                } while (cursor.moveToNext());
+            }
+        } catch (MyRuntimeException e) {
+            e.printStackTrace();
+        } finally {
+            if (cursor != null && !cursor.isClosed())
+                cursor.close();
+            if (db != null && db.isOpen())
+                db.close();
+        }
+        return sentences;
     }
 }

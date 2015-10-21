@@ -54,15 +54,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/primary_text"/>
 
-            <widgets.PersianTextView
-                android:id="@+id/txtVocabPersianMeaning"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:padding="15dp"
-                android:text="Place a premium on something else"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/secondary_text"/>
 
         </LinearLayout>
 

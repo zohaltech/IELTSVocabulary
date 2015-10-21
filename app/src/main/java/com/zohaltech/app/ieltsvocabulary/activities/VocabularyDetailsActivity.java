@@ -1,7 +1,6 @@
 package com.zohaltech.app.ieltsvocabulary.activities;
 
 
-import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -16,11 +15,11 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.zohaltech.app.ieltsvocabulary.R;
 import com.zohaltech.app.ieltsvocabulary.adapters.DescriptionPagerAdapter;
 import com.zohaltech.app.ieltsvocabulary.classes.App;
-import com.zohaltech.app.ieltsvocabulary.data.Examples;
 import com.zohaltech.app.ieltsvocabulary.data.Notes;
+import com.zohaltech.app.ieltsvocabulary.data.Sentences;
 import com.zohaltech.app.ieltsvocabulary.data.Vocabularies;
-import com.zohaltech.app.ieltsvocabulary.entities.Example;
 import com.zohaltech.app.ieltsvocabulary.entities.Note;
+import com.zohaltech.app.ieltsvocabulary.entities.Sentence;
 import com.zohaltech.app.ieltsvocabulary.entities.Vocabulary;
 
 import java.util.ArrayList;
@@ -41,7 +40,7 @@ public class VocabularyDetailsActivity extends EnhancedActivity {
     ViewPager            pagerCategories;
 
     DescriptionPagerAdapter descriptionPagerAdapter;
-    ArrayList<Example>      examples;
+    ArrayList<Sentence>     sentences;
     ArrayList<Note>         notes;
     Vocabulary              vocabulary;
     int tabCount = 2;
@@ -79,12 +78,12 @@ public class VocabularyDetailsActivity extends EnhancedActivity {
             }
         });
 
-        examples = Examples.getExamples(vocabularyId);
+        sentences = Sentences.getVocabSentences(vocabularyId);
         notes = Notes.getNotes(vocabularyId);
 
         ArrayList<String> tabTitles = new ArrayList<>();
         tabTitles.add("Definition");
-        tabTitles.add("Examples");
+        tabTitles.add("Sentences");
         if (notes.size() > 0) {
             tabTitles.add("Notes");
             tabCount = 3;

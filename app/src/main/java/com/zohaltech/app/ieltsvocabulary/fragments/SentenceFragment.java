@@ -10,19 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zohaltech.app.ieltsvocabulary.R;
-import com.zohaltech.app.ieltsvocabulary.adapters.ExampleAdapter;
-import com.zohaltech.app.ieltsvocabulary.data.Examples;
-import com.zohaltech.app.ieltsvocabulary.entities.Example;
+import com.zohaltech.app.ieltsvocabulary.adapters.SentenceAdapter;
+import com.zohaltech.app.ieltsvocabulary.data.Sentences;
+import com.zohaltech.app.ieltsvocabulary.entities.Sentence;
 
 import java.util.ArrayList;
 
-public class ExamplesFragment extends Fragment {
+public class SentenceFragment extends Fragment {
     public static final String VOCAB_ID = "VOCAB_ID";
 
-    public static ExamplesFragment newInstance(int vocabId) {
+    public static SentenceFragment newInstance(int vocabId) {
         Bundle args = new Bundle();
         args.putInt(VOCAB_ID, vocabId);
-        ExamplesFragment fragment = new ExamplesFragment();
+        SentenceFragment fragment = new SentenceFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,13 +34,13 @@ public class ExamplesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_examples, container, false);
+        View view = inflater.inflate(R.layout.fragment_sentence, container, false);
         RecyclerView recyclerExamples = (RecyclerView) view.findViewById(R.id.recyclerExamples);
         recyclerExamples.setHasFixedSize(true);
         recyclerExamples.setLayoutManager(new LinearLayoutManager(getActivity()));
         int vocabId = getArguments().getInt(VOCAB_ID);
-        ArrayList<Example> examples = Examples.getExamples(vocabId);
-        ExampleAdapter adapter = new ExampleAdapter(getActivity(), examples);
+        ArrayList<Sentence> sentences = Sentences.getVocabSentences(vocabId);
+        SentenceAdapter adapter = new SentenceAdapter(getActivity(), sentences);
         recyclerExamples.setAdapter(adapter);
         return view;
     }

@@ -22,9 +22,7 @@ public class DefinitionFragment extends Fragment implements
                                                       TextToSpeech.OnInitListener {
     public static final String VOCAB_ID = "VOCAB_ID";
     TextView txtVocabEnglishDefinition;
-    TextView txtVocabPersianMeaning;
-
-    private Vocabulary vocabulary;
+     private Vocabulary vocabulary;
     private TextToSpeech textToSpeech;
 
 
@@ -46,7 +44,6 @@ public class DefinitionFragment extends Fragment implements
         View view = inflater.inflate(R.layout.fragment_definition, container, false);
 
         txtVocabEnglishDefinition = (TextView) view.findViewById(R.id.txtVocabEnglishDefinition);
-        txtVocabPersianMeaning = (TextView) view.findViewById(R.id.txtVocabPersianMeaning);
         Button btnSpeechUS = (Button) view.findViewById(R.id.btnSpeechUS);
         Button btnSpeechUK = (Button) view.findViewById(R.id.btnSpeechUK);
 
@@ -57,9 +54,6 @@ public class DefinitionFragment extends Fragment implements
 
         assert vocabulary != null;
         txtVocabEnglishDefinition.setText(vocabulary.getVocabEnglishDef());
-
-//        txtVocabEnglishDefinition.setText(vocabulary.getEncEngDef());
-//        txtVocabPersianMeaning.setText(vocabulary.getEncPersianDef());
 
         btnSpeechUK.setOnClickListener(new View.OnClickListener() {
             @Override
