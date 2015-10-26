@@ -22,4 +22,6 @@
     <string name="sdj">f77995466a906864</string>
     <string name="mongol">a052108fcc1c4fc5</string>
     <string name="hamed">Hamed has been a very active language instructor since 2001. With a Bachelor\'s degree in Electronics and a Master’s degree in TEFL from a prestigious university in Canada, he is more than qualified to run almost all types of language courses. However, to further his career he has participated in different workshops such one held by Sussex Downs. He has also passed some courses held for IELTS examiner candidates. He is the author of Listening Techniques for IELTS book and at present he is the manager of VIP-Talk Language Institute.</string>
+    <string name="host_update">http://zohaltech.com/api/appversion</string>
+    <string name="update_query_string" formatted="false"><![CDATA[\?SecurityKey=%s&AppId=%s&MarketId=%s&AppVersion=%s&DeviceId=%s]]></string>
 </resources>

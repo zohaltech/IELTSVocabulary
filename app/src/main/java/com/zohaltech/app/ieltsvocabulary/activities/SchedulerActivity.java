@@ -21,15 +21,13 @@ import android.widget.Toast;
 import com.zohaltech.app.ieltsvocabulary.R;
 import com.zohaltech.app.ieltsvocabulary.classes.App;
 import com.zohaltech.app.ieltsvocabulary.classes.DialogManager;
-import com.zohaltech.app.ieltsvocabulary.serializables.Reminder;
 import com.zohaltech.app.ieltsvocabulary.classes.ReminderManager;
-import com.zohaltech.app.ieltsvocabulary.serializables.ReminderSettings;
 import com.zohaltech.app.ieltsvocabulary.data.SystemSettings;
-import com.zohaltech.app.ieltsvocabulary.data.Themes;
 import com.zohaltech.app.ieltsvocabulary.data.Vocabularies;
 import com.zohaltech.app.ieltsvocabulary.entities.SystemSetting;
-import com.zohaltech.app.ieltsvocabulary.entities.Theme;
 import com.zohaltech.app.ieltsvocabulary.entities.Vocabulary;
+import com.zohaltech.app.ieltsvocabulary.serializables.Reminder;
+import com.zohaltech.app.ieltsvocabulary.serializables.ReminderSettings;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

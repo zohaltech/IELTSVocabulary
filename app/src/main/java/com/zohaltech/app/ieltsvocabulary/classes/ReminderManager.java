@@ -20,7 +20,7 @@ import java.util.Locale;
 
 public class ReminderManager
 {
-    private static String REMINDER_SETTINGS = "reminder_settings";
+    public static String REMINDER_SETTINGS = "reminder_settings";
     private static String LAST_REMINDER = "last_reminder";
     public static String SENT_WORDS_PER_DAY = "words_per_day";
 

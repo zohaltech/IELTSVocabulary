@@ -13,38 +13,39 @@ import android.preference.PreferenceManager;
 
 import java.util.Locale;
 
-public class App extends Application {
+public class App extends Application
+{
 
     public static final int MARKET_BAZAAR = 0;
-    public static final int MARKET_CANDO  = 1;
-    public static final int MARKET_MYKET  = 2;
-    public static final int MARKET_PLAY   = 3;
+    public static final int MARKET_CANDO = 1;
+    public static final int MARKET_MYKET = 2;
+    public static final int MARKET_PLAY = 3;
 
-    public static Context           context;
-    public static Activity          currentActivity;
+    public static Context context;
+    public static Activity currentActivity;
     public static SharedPreferences preferences;
     //public static Typeface          englishFont;
     //public static Typeface          englishFontBold;
-    public static Typeface          persianFont;
-    public static Typeface          persianFontBold;
-    public static Handler           handler;
-    public static int               screenWidth;
-    public static int               screenHeight;
-    public static Locale            locale;
-    public static int               market;
-    public static String            marketName;
-    public static String            marketPackage;
-    public static String            marketAction;
-    //public static String            marketUri;
-    public static String            marketWebsiteUri;
-    public static String            marketDeveloperUri;
-    public static String            marketPollUri;
-    public static String            marketPollIntent;
-    public static String            marketPublicKey;
+    public static Typeface persianFont;
+    public static Typeface persianFontBold;
+    public static Handler handler;
+    public static int screenWidth;
+    public static int screenHeight;
+    public static Locale locale;
+    public static int market;
+    public static String marketName;
+    public static String marketPackage;
+    public static String marketAction;
+    public static String marketUri;
+    public static String marketWebsiteUri;
+    public static String marketDeveloperUri;
+    public static String marketPollUri;
+    public static String marketPollIntent;
 
     public static NotificationManager notificationManager;
 
-    public static void setAppLocal() {
+    public static void setAppLocal()
+    {
         locale = new Locale("en");
         Locale.setDefault(locale);
         Configuration config = context.getResources().getConfiguration();
@@ -53,7 +54,8 @@ public class App extends Application {
     }
 
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         super.onCreate();
         context = getApplicationContext();
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -68,50 +70,61 @@ public class App extends Application {
         setAppLocal();
 
         //todo : set market here and in manifest
-        market = MARKET_BAZAAR;
-        marketName = "بازار";
-        marketPackage = "com.farsitel.bazaar";
-        marketAction = "ir.cafebazaar.pardakht.InAppBillingService.BIND";
-        //marketUri = "bazaar://details?id=" + getPackageName();
-        marketWebsiteUri = "http://cafebazaar.ir/app/" + getPackageName();
-        marketDeveloperUri = "bazaar://collection?slug=by_author&aid=zohaltech";
-        marketPollUri = "bazaar://details?id=" + getPackageName();
-        marketPollIntent = Intent.ACTION_EDIT;
-        marketPublicKey = ConstantParams.getBazaarPublicKey();
+        setTargetMarket(MARKET_BAZAAR);
+    }
 
-        //market = MARKET_CANDO;
-        //marketName = "کندو";
-        //marketPackage = "com.ada.market";
-        //marketAction = "com.ada.market.service.payment.BIND";
-        ////marketUri = "cando://details?id=" + getPackageName();
-        //marketWebsiteUri = "http://cando.asr24.com/app.jsp?package=" + getPackageName();
-        //marketDeveloperUri = "cando://publisher?id=zohaltech@gmail.com";
-        //marketPollUri = "cando://leave-review?id=" + getPackageName();
-        //marketPollIntent = Intent.ACTION_VIEW;
-        //marketPublicKey = ConstantParams.getCandoPublicKey();
-
-        //market = MARKET_MYKET;
-        //marketName = "مایکت";
-        //marketPackage = "ir.mservices.market";
-        //marketAction = "ir.mservices.market.InAppBillingService.BIND";
-        ////marketUri = "myket://application/#Intent;scheme=myket;package= + getPackageName() + ;end";
-        //marketWebsiteUri = "http://myket.ir/Appdetail.aspx?id=" + getPackageName();
-        //marketDeveloperUri = "http://myket.ir/DeveloperApps.aspx?Packagename=" + getPackageName();
-        //marketPollUri = "myket://comment/#Intent;scheme=comment;package=" + getPackageName() + ";end";
-        //marketPollIntent = Intent.ACTION_VIEW;
-        //marketPublicKey = ConstantParams.getMyketPublicKey();
-
-        //market = MARKET_PLAY;
-        //marketName = "Google Play";
-        //marketPackage = "com.android.vending";
-        //marketAction = "com.android.vending.billing.InAppBillingService.BIND";
-        //marketUri = "market://details?id=" + getPackageName();
-        //marketWebsiteUri = "" + getPackageName();
-        //marketPollIntent = Intent.ACTION_EDIT;
+    private void setTargetMarket(int marketId)
+    {
+        switch (marketId)
+        {
+            case MARKET_BAZAAR:
+                market = MARKET_BAZAAR;
+                marketName = "Bazaar";
+                marketPackage = "com.farsitel.bazaar";
+                marketAction = "ir.cafebazaar.pardakht.InAppBillingService.BIND";
+                marketUri = "bazaar://details?id=" + getPackageName();
+                marketWebsiteUri = "http://cafebazaar.ir/app/" + getPackageName();
+                marketDeveloperUri = "bazaar://collection?slug=by_author&aid=zohaltech";
+                marketPollUri = "bazaar://details?id=" + getPackageName();
+                marketPollIntent = Intent.ACTION_EDIT;
+                break;
+            case MARKET_CANDO:
+                market = MARKET_CANDO;
+                marketName = "Cando";
+                marketPackage = "com.ada.market";
+                marketAction = "com.ada.market.service.payment.BIND";
+                marketUri = "cando://details?id=" + getPackageName();
+                marketWebsiteUri = "http://cando.asr24.com/app.jsp?package=" + getPackageName();
+                marketDeveloperUri = "cando://publisher?id=zohaltech@gmail.com";
+                marketPollUri = "cando://leave-review?id=" + getPackageName();
+                marketPollIntent = Intent.ACTION_VIEW;
+                break;
+            case MARKET_MYKET:
+                market = MARKET_MYKET;
+                marketName = "Myket";
+                marketPackage = "ir.mservices.market";
+                marketAction = "ir.mservices.market.InAppBillingService.BIND";
+                marketUri = "myket://application/#Intent;scheme=myket;package= + getPackageName() + ;end";
+                marketWebsiteUri = "http://myket.ir/Appdetail.aspx?id=" + getPackageName();
+                marketDeveloperUri = "http://myket.ir/DeveloperApps.aspx?Packagename=" + getPackageName();
+                marketPollUri = "myket://comment/#Intent;scheme=comment;package=" + getPackageName() + ";end";
+                marketPollIntent = Intent.ACTION_VIEW;
+                break;
+            case MARKET_PLAY:
+                market = MARKET_PLAY;
+                marketName = "Google Play";
+                marketPackage = "com.android.vending";
+                marketAction = "com.android.vending.billing.InAppBillingService.BIND";
+                marketUri = "market://details?id=" + getPackageName();
+                marketWebsiteUri = "" + getPackageName();
+                marketPollIntent = Intent.ACTION_EDIT;
+                break;
+        }
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(Configuration newConfig)
+    {
         super.onConfigurationChanged(newConfig);
         Locale.setDefault(locale);
         Configuration config = new Configuration();

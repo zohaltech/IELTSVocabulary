@@ -10,7 +10,6 @@ import android.provider.Settings;
 import com.zohaltech.app.ieltsvocabulary.classes.App;
 import com.zohaltech.app.ieltsvocabulary.classes.CsvReader;
 import com.zohaltech.app.ieltsvocabulary.classes.MyRuntimeException;
-import com.zohaltech.app.ieltsvocabulary.entities.Theme;
 
 import java.io.InputStreamReader;
 

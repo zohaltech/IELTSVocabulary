@@ -56,9 +56,6 @@ public class DrawerFragment extends Fragment {
                         intent = new Intent(getActivity(), IntroductionActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_buy:
-                        ((MainActivity) getActivity()).pay();
-                        break;
                     case R.id.nav_about:
                         intent = new Intent(getActivity(), AboutActivity.class);
                         startActivity(intent);
