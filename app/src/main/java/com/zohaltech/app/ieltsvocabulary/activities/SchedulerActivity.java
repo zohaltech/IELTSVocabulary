@@ -224,7 +224,7 @@ public class SchedulerActivity extends EnhancedActivity
 
         settings = ReminderManager.getReminderSettings();
         Date time = settings.getReminder().getTime();
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE HH:mm", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM HH:mm", Locale.getDefault());
         MyToast.show("First vocabulary will be notified on " + sdf.format(time), Toast.LENGTH_LONG);
     }
 
@@ -245,6 +245,16 @@ public class SchedulerActivity extends EnhancedActivity
         {
             btnStop.setVisibility(View.VISIBLE);
             btnPause.setVisibility(View.VISIBLE);
+
+            if (settings.getReminder() != null)
+            {
+                Reminder reminder = settings.getReminder();
+                if (reminder.getTime() != null)
+                {
+                    SimpleDateFormat sdf = new SimpleDateFormat("EEE, dd MMM HH:mm", Locale.getDefault());
+                    MyToast.show("Next alarm: " + sdf.format(reminder.getTime().getTime()), Toast.LENGTH_LONG);
+                }
+            }
         }
         else if (settings.getStatus() == ReminderSettings.Status.PAUSE)
         {
