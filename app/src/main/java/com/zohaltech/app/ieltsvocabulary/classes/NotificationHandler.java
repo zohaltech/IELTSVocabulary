@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
@@ -27,7 +28,8 @@ public class NotificationHandler {
     private static Notification getUpdateNotification(Context context, String title, String text) {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.drawable.ic_notification)
+                        .setSmallIcon(R.drawable.ic_notification_update)
+                        .setLargeIcon(BitmapFactory.decodeResource(App.context.getResources(), R.mipmap.ic_launcher))
                         .setContentTitle(title)
                         .setContentText(text)
                         .setShowWhen(true)
