@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:background="@drawable/drawer_header_bg"
+    android:background="@drawable/nav_header_bg"
     android:clickable="true"
     android:gravity="center"
     android:orientation="horizontal">
@@ -25,14 +25,14 @@
         <widgets.LatinTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Core"
+            android:text="@string/drawer_header_1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/white"/>
 
         <widgets.LatinTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vocabulary"
+            android:text="@string/drawer_header_2"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/white"/>
 

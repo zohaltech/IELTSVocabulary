@@ -1,27 +1,20 @@
 <resources>
     <string name="app_name">IELTS Vocabulary</string>
-    <string name="title_themes">Themes</string>
-    <string name="action_search">Search</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="copyright">Copyright © 2015 ZohalTech</string>
     <string name="all_rights">All Rights Reserved</string>
     <string name="share_title">Share with friends</string>
-    <string name="feedback_subject">Core Vocabulary Feedback</string>
+    <string name="feedback_subject">IELTS Vocabulary Feedback</string>
     <string name="feedback_title">Feedback</string>
 
-    <string name="sharing_message" formatted="false">\"%s\" is a must have android app for improving your everday english. download it from the link below:\n%s</string>
-    <string name="could_not_open_market">Could not find Bazaar app on your device, Please install Bazaar first</string>
+    <string name="sharing_message" formatted="false">\"%s\" is a must have android app for improving your everyday english. download it from the link below:\n%s</string>
+    <string name="could_not_open_market" formatted="false">Could not find %s on your device, Please install it</string>
     <string name="press_back_again_to_exit">Press back again to exit</string>
-    <string name="title_search">Search</string>
-    <string name="bare_sala">MIHNMA0GCSqGSIb3DQEBAQUAA4G7ADCBtwKBrwDAzqovxwI26gxwxAPPoRmAM7Y2vIEXE0AuJHZ1/yF0I3uyw5VNredwHrupLFeWh850/4xNWf4yIsJ/5aOOUOlw5qA7+v+mQKGJLfAQujZwW8bPzMJPZxd58zYrmYYAFx7AXLa9py6y5ABBI6neo4TKcYrSs0ylgVGEunbNeEZsKh0yBnj4gd0w2fg+AlxYhais/OyyGT51ztpPSghGvpH2vM9REx4j0dHetB9quZ8CAwEAAQ==</string>
-    <string name="nice_ass">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCC3hfXAyBj1bnrlNilrtdW4U1qkI8FP27usDKinH9w/XQddtbyn/yY+Qpgi9rZqGEiy8g7jqZr6YZAM3hJCB4V6dvZPwdHmF2AgtbQJQGYbk4lfhfzQl+UGUtsRJtiaPoJZ7ZTYFlqlAz0tRR83w5y0NdkHyqnaJYyOBvI9jgmXwIDAQAB</string>
-    <string name="doozlu_bala">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCGN9sRFv3pBjMj8x+G8lHzreTmUx2NJSTdANyw8uNeQTaoRGW+Vm8vveTZ6nw5PKIWb3Cy6jL5tQ65d4mfxjKtWauM0bbhzKgOgVaFsPMZQaJUnvv00DW8ncIor1lcdys33X+s0h6vwmbPlvbAFaLcGBe5aTrMjkmX+mqkeWJQSQIDAQAB</string>
     <string name="host_name">http://zohaltech.com/api/app/post</string>
     <string name="jan">8F2CF4F0C905</string>
-    <string name="sdj">f77995466a906864</string>
-    <string name="mongol">a052108fcc1c4fc5</string>
-    <string name="hamed">Hamed has been a very active language instructor since 2001. With a Bachelor\'s degree in Electronics and a Master’s degree in TEFL from a prestigious university in Canada, he is more than qualified to run almost all types of language courses. However, to further his career he has participated in different workshops such one held by Sussex Downs. He has also passed some courses held for IELTS examiner candidates. He is the author of Listening Techniques for IELTS book and at present he is the manager of VIP-Talk Language Institute.</string>
     <string name="host_update">http://zohaltech.com/api/appversion</string>
     <string name="update_query_string" formatted="false"><![CDATA[\?SecurityKey=%s&AppId=%s&MarketId=%s&AppVersion=%s&DeviceId=%s]]></string>
+    <string name="drawer_header_1">IELTS</string>
+    <string name="drawer_header_2">Vocabulary</string>
 </resources>
