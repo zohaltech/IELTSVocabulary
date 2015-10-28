@@ -2,8 +2,10 @@ package com.zohaltech.app.ieltsvocabulary.serializables;
 
 import java.io.Serializable;
 
-public class ReminderSettings implements Serializable {
-    public enum Status {
+public class ReminderSettings implements Serializable
+{
+    public enum Status
+    {
         STOP, RUNNING, PAUSE, FINISHED
     }
 
@@ -23,51 +25,63 @@ public class ReminderSettings implements Serializable {
         setWordsPerDay(wordsPerDay);
     }
 
-    public String getStartTime() {
+    public String getStartTime()
+    {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(String startTime)
+    {
         this.startTime = startTime;
     }
 
-    public int getIntervals() {
+    public int getIntervals()
+    {
         return intervals;
     }
 
-    public void setIntervals(int intervals) {
+    public void setIntervals(int intervals)
+    {
         this.intervals = intervals;
     }
 
-    public Status getStatus() {
+    public Status getStatus()
+    {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(Status status)
+    {
         this.status = status;
     }
 
-    public Reminder getReminder() {
+    public Reminder getReminder()
+    {
         return reminder;
     }
 
-    public void setReminder(Reminder reminder) {
+    public void setReminder(Reminder reminder)
+    {
         this.reminder = reminder;
     }
 
-    public boolean[] getWeekdays() {
+    public boolean[] getWeekdays()
+    {
         return weekdays;
     }
 
-    public void setWeekdays(boolean[] weekdays) {
+    public void setWeekdays(boolean[] weekdays)
+    {
         this.weekdays = weekdays;
     }
 
-    public int getWordsPerDay() {
+    public int getWordsPerDay()
+    {
         return wordsPerDay;
     }
 
-    public void setWordsPerDay(int wordsPerDay) {
+    public void setWordsPerDay(int wordsPerDay)
+    {
         this.wordsPerDay = wordsPerDay;
     }
 }

@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
 
 public class DataAccess extends SQLiteOpenHelper {
     public static final String DATABASE_NAME    = "IELTS_VOCABULARIES";
-    public static final int    DATABASE_VERSION =7;
+    public static final int    DATABASE_VERSION = 7;
 
     public DataAccess() {
         super(App.context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -35,7 +35,7 @@ public class DataAccess extends SQLiteOpenHelper {
             insertDataFromAsset(db, Themes.TableName, "data/categories.csv", ';');
             insertDataFromAsset(db, Sentences.TableName, "data/sentences.csv", ';');
             insertDataFromAsset(db, Vocabularies.TableName, "data/vocabs.csv", ';');
-            insertDataFromAsset(db, VocabSentences.TableName, "data/vacab_sentence.csv", ';');
+            insertDataFromAsset(db, VocabSentences.TableName, "data/vocab_sentence.csv", ';');
 
             ContentValues systemSettingsValues = new ContentValues();
             systemSettingsValues.put(SystemSettings.Installed, 0);

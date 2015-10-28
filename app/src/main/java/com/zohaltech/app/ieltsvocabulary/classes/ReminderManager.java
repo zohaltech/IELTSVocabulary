@@ -20,16 +20,14 @@ import java.util.Locale;
 
 public class ReminderManager
 {
-    public static String REMINDER_SETTINGS = "reminder_settings";
-    private static String LAST_REMINDER = "last_reminder";
-    public static String SENT_WORDS_PER_DAY = "words_per_day";
+    public static  String REMINDER_SETTINGS  = "reminder_settings";
+    private static String LAST_REMINDER      = "last_reminder";
+    public static  String SENT_WORDS_PER_DAY = "words_per_day";
 
     // this method is meant to be called just by AlarmReceiver class!
-    public static void registerNextReminder(int currentVocabularyId, boolean doesTriggersNext)
-    {
+    public static void registerNextReminder(int currentVocabularyId, boolean doesTriggersNext) {
         Vocabulary current = Vocabularies.select(currentVocabularyId);
-        if (current == null)
-        {
+        if (current == null) {
             // exception occurred.
             return;
         }
@@ -37,16 +35,14 @@ public class ReminderManager
         current.setLearned(true);
         Vocabularies.update(current);
 
-        if (!doesTriggersNext)
-        {
+        if (!doesTriggersNext) {
             return;
         }
 
         ReminderSettings settings = ReminderManager.getReminderSettings();
 
         Vocabulary next = Vocabularies.next(currentVocabularyId);
-        if (next == null)
-        {
+        if (next == null) {
             settings.setStatus(ReminderSettings.Status.FINISHED);
             settings.setReminder(null);
             ReminderManager.applyReminderSettings(settings);
@@ -172,6 +168,7 @@ public class ReminderManager
             }
         }
 
+
         if (!settings.getWeekdays()[today - 1] || elapsedMinutes > startTime || getTodaySentWords() >= settings.getWordsPerDay())
         {
             for (int j = 1; j <= 7; j++)
@@ -263,9 +260,10 @@ public class ReminderManager
 
     public static void setLastReminder(Reminder reminder)
     {
+        App.preferences.edit().putInt(SENT_WORDS_PER_DAY, getTodaySentWords() + 1).apply();
+
         Gson gson = new Gson();
         App.preferences.edit().putString(LAST_REMINDER, gson.toJson(reminder)).apply();
-        App.preferences.edit().putInt(SENT_WORDS_PER_DAY, getTodaySentWords() + 1).apply();
     }
 
     public static int getTodaySentWords()

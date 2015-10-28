@@ -20,11 +20,11 @@
             android:orientation="vertical">
 
             <widgets.LatinTextView
+                android:id="@+id/txtWelcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Welcome to Core Vocabulary"
                 android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/green"/>
